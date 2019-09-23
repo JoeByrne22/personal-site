@@ -1,0 +1,190 @@
+// include an svg icon as a background image using variables
+@function svg-background($svg-variable) {
+  @return url("data:image/svg+xml,#{$svg-variable}");
+}
+
+@mixin hi-res($img) {
+  @media
+      only screen and (-webkit-min-device-pixel-ratio: 2),
+      only screen and (min-resolution: 196dpi),
+      only screen and (min-resolution: 2dppx) {
+    background-image: url($img);
+    @content;
+  }
+}
+@mixin object-fit($fit: fill, $position: null) {
+  -o-object-fit: $fit;
+  object-fit: $fit;
+  @if $position {
+    -o-object-position: $position;
+    object-position: $position;
+    font-family: 'object-fit: #{$fit}; object-position: #{$position}';
+  } @else {
+    font-family: 'object-fit: #{$fit}';
+  }
+}
+
+/// Mixin to customize scrollbars
+/// Beware, this does not work in all browsers
+/// @author Hugo Giraudel
+/// @param {Length} $size - Horizontal scrollbar's height and vertical scrollbar's width
+/// @param {Color} $foreground-color - Scrollbar's color
+/// @param {Color} $background-color [mix($foreground-color, white, 50%)] - Scrollbar's color
+/// @example scss - Scrollbar styling
+///   @include scrollbars(.5em, slategray);
+@mixin scrollbars($size: 6px, $foreground-color: $black, $background-color: $white) {
+  // For Google Chrome
+  &::-webkit-scrollbar {
+    position: absolute;
+    width: $size;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+}
+
+@mixin shadow(){ 
+  &:after{
+    z-index: -1;
+    content:'';
+    position: absolute;
+    top:4rem;
+    left:-4rem;
+    width: 100%;
+    height:100%;  
+    background: #f3f3f3; 
+  } 
+}
+
+
+@mixin get-all-space() {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@mixin center-xy {
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin center-y {
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
+}
+
+@mixin center-x {
+  right: auto;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}
+}
+
+
+@mixin owl($margin: null) {
+
+  > *:first-child {
+    margin-top: 0;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+
+  @if $margin {
+    > * + * {
+      margin: $margin;
+    }
+  }
+
+}
+  
+
+@mixin box-themed {
+	width: 100%; 
+	position: relative;
+
+	@media #{$breakpoint-md} {
+		width: 100%; 
+		min-height: 250px;
+		// position: absolute;
+		// bottom:0;
+	}
+	@extend %gradient-orange;
+	transition: all ease 0.2s;
+ 
+		.box-themed-wrap{ 
+			position:relative; 
+			width:100%; 
+			text-align:left;
+			padding: 1.5rem;  
+			@media #{$breakpoint-md} {
+				padding: 3.0rem; 
+			}
+			&:before{
+				content:"";
+				position:absolute;
+				left:1.5rem;
+				top:0;
+				background:$orange;
+				width:50px;
+				height:3px;
+				@media #{$breakpoint-md} {
+					left:3.0rem;
+					width:100px;
+					height:7px;
+				}
+			}  
+		}
+}
+
+
+%link-nostyle {
+  color: inherit;
+  text-decoration: none;
+}
+
+%gradient-orange{
+	background: linear-gradient(to bottom, rgba(255,128,2,0.33) 0%,rgba(255,128,2,0) 100%);
+}
+%gradient-black{
+	background: linear-gradient(to bottom, rgba(0,0,0,0.09) 0%,rgba(255,128,2,0) 100%);
+}
+%text-darker{
+	color:$black;
+}
+%border-top-h2{
+
+  color:$white;
+  font-weight:bold; 
+  position:relative;
+  font-size: 2.85rem;
+  margin:3rem 0;
+
+  &:before{
+    content:'';
+    position: absolute; 
+    top:-25px;
+    left:0;
+    background:$white; 
+    height:8px;
+    width:100px;
+  } 
+}

@@ -1,0 +1,7 @@
+var scrollMagic = {
+	init: function() {
+ 
+
+ 
+	}
+}

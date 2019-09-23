@@ -1,0 +1,827 @@
+.is-loaded {
+    .bcg {
+      visibility:visible;
+      transform: scale(1);
+    }
+ }
+
+.index-section {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 3rem;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 100;
+  color: white;
+  overflow-y: clip; 
+}
+
+
+.main-container{
+  position:relative;
+}
+/* =Header */
+.header-container {
+  height: 100%;
+    width: 100%;
+    max-width: 144.0rem;
+    margin:auto; 
+    position: relative;
+    overflow:hidden;
+    z-index: 3;
+    padding: 0rem 1.6rem 0rem 1.6rem;
+    @media #{$breakpoint-md} {
+      padding: 6rem 11.4rem 2.8rem 11.4rem;
+    }
+    .wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+}
+
+
+#box01{
+.hero-content{
+    padding:15rem 0 11rem 0;
+  }
+  .intro01{
+    position: relative;
+      .bcg{
+        background-image: url('../img/src/segment-1-technology01.jpg');
+
+      }
+  }
+  .intro02{
+    position: relative;
+
+    .bcg {
+      background-image: url('../img/src/segment-1-technology02.jpg');
+    }
+  }
+  .intro03{
+    .header-container{
+      background-color: black;
+    }
+    h3 {
+      color: $white;
+      font-family: $font-family-bold;
+      font-size: 35px;
+      margin: 0 0 9.2rem 0;
+    }
+    p {
+      color: $white;
+
+    }
+  }
+
+  .intro04{
+    width:100%;
+  }
+}
+
+
+#box02{
+.hero-content{
+  padding:15rem 0 11rem 0;
+}
+
+
+//Seize the moment : TAB 1;
+
+
+
+      .article01-1{ 
+        position: relative;
+          .bcg{
+            background-image: url('../img/src/segment-2-seize-the-moment01.png');
+            @media #{$breakpoint-md} { 
+            }
+          }
+      }
+
+      .article01-2 {
+        position: relative;
+          background-color: #f5f5f5;
+          .wrapper{
+            text-align: center;
+              padding: 12.7rem 4rem 12.7rem 4rem;
+                @media #{$breakpoint-md} {
+                      padding: 12.7rem 10.6rem 12.7rem 10.6rem;
+                }
+          }
+          h3{
+            font-family: $font-family-bold;
+          }
+          .wrapper{
+              display: flex;
+              flex-direction: column;
+            }
+      }
+
+      .article01-3{
+        position: relative;
+          .bcg{
+            background-image: url('../img/src/segment-2-seize-the-moment02.png');     
+          }
+            .article-container{
+              background-color: black;
+            }
+
+            h3 {
+              color: $black;
+              font-family: $font-family-bold;
+              font-size: 35px;
+              margin: 0 0 9.2rem 0;
+              padding-right: 40px;
+            }
+            p {
+              color: $white;
+
+            }
+            .wrapper{
+              vertical-align: middle;
+            }
+              .item{
+                    padding-top: 6rem;
+              };
+            ul{
+              list-style-position: outside;
+              margin-left: 16px;
+            }
+            li{
+              font-size:1.6rem;
+              margin:0;
+              padding:0 0 1.6rem 0;
+              line-height:2.4rem;
+              font-family: $font-family-semiBold;
+              @media #{$breakpoint-md} {
+                  font-size:1.8rem;
+            }
+        }
+      }
+
+      .article01-4{
+        position: relative;
+        width:100%;
+      }
+
+
+
+
+
+
+    //Boost productivity: TAB 2;
+
+
+
+
+      .article02-1{ 
+        position: relative;
+          .bcg{
+            background-image: url('../img/src/segment-3-boost-productivity01.jpg');
+            @media #{$breakpoint-md} { 
+            }
+          }
+      }
+
+      .article02-2 {
+        position: relative;
+          background-color: #f5f5f5;
+          .wrapper{
+            text-align: center;
+              padding: 12.7rem 4rem 12.7rem 4rem;
+                @media #{$breakpoint-md} {
+                      padding: 12.7rem 10.6rem 12.7rem 10.6rem;
+                }
+          }
+          h3{
+            font-family: $font-family-bold;
+          }
+          .wrapper{
+              display: flex;
+              flex-direction: column;
+            }
+      }
+
+      .article02-3{
+        position: relative;
+          .bcg{
+            background-image: url('../img/src/segment-3-boost-productivity02.png');     
+          }
+            .article-container{
+              background-color: black;
+            }
+
+            h3 {
+              color: $black;
+              font-family: $font-family-bold;
+              font-size: 35px;
+              margin: 0 0 9.2rem 0;
+              padding-right: 40px;
+            }
+            p {
+              color: $white;
+
+            }
+            .wrapper{
+              vertical-align: middle;
+            }
+              .item{
+                    padding-top: 6rem;
+              };
+            ul{
+              list-style-position: outside;
+              margin-left: 16px;
+            }
+            li{
+              font-size:1.6rem;
+              margin:0;
+              padding:0 0 1.6rem 0;
+              line-height:2.4rem;
+              font-family: $font-family-semiBold;
+              @media #{$breakpoint-md} {
+                  font-size:1.8rem;
+            }
+        }
+      }
+
+      .article02-4{
+        position: relative;
+        width:100%;
+      }
+
+
+
+
+
+
+      // retail sector: TAB 3;
+
+
+
+
+
+
+
+
+      .article03-1{
+        // top: 48px;
+        position: relative;
+          .bcg{
+            background-image: url('../img/src/segment-4-retail-sector01.png');
+          }
+      }
+
+      .article03-2 {
+        position: relative;
+      background-color: #f5f5f5;
+        .wrapper{
+          text-align: center;
+            padding: 12.7rem 4rem 12.7rem 4rem;
+              @media #{$breakpoint-md} {
+                    padding: 12.7rem 10.6rem 12.7rem 10.6rem;
+              }
+        }
+        h3{
+          font-family: $font-family-bold;
+        }
+        .wrapper{
+            display: flex;
+            flex-direction: column;
+          }
+       }
+
+      .article03-3{
+        position: relative;
+          .bcg{
+            background-image: url('../img/src/segment-4-retail-sector02.png');
+            background-size: contain; 
+            top: auto;
+            @media #{$breakpoint-md} {
+              background-size: contain; 
+              top: auto;
+            }
+          }
+            .article-container{
+              background-color: black;
+            }
+
+            h3 {
+              color: $black;
+              font-family: $font-family-bold;
+              font-size: 35px;
+              margin: 0 0 9.2rem 0;
+              padding-right: 40px;
+            }
+            p {
+              color: $white;
+
+            }
+            .wrapper{
+              vertical-align: middle;
+            }
+              .item{
+                    padding-top: 6rem;
+              };
+            ul{
+              list-style-position: outside;
+              margin-left: 16px;
+            }
+            li{
+              font-size:1.6rem;
+              margin:0;
+              padding:0 0 1.6rem 0;
+              line-height:2.4rem;
+              font-family: $font-family-semiBold;
+              @media #{$breakpoint-md} {
+                  font-size:1.8rem;
+            }
+        }
+      }
+
+      .article03-4{
+        position: relative;
+        width:100%;
+      }
+    }
+
+
+
+// Faster value: TAB 4;
+
+
+
+
+
+
+
+
+
+    .article04-1{
+      position: relative;
+        .bcg{
+          background-image: url('../img/src/segment-5-faster-value01.png');
+          }
+    }
+
+    .article04-2 {
+      position: relative;
+        background-color: #f5f5f5;
+        .wrapper{
+          text-align: center;
+            padding: 12.7rem 4rem 12.7rem 4rem;
+              @media #{$breakpoint-md} {
+                padding: 12.7rem 10.6rem 12.7rem 10.6rem;
+              }
+        }
+        h3{
+          font-family: $font-family-bold;
+        }
+    }
+
+    .article04-3{
+      position: relative;
+        .bcg{
+          background-image: url('../img/src/segment-5-faster-value02.png');
+
+          }
+        
+          .article-container{
+            background-color: black;
+          }
+
+          h3 {
+            color: $black;
+            font-family: $font-family-bold;
+            font-size: 35px;
+            margin: 0 0 9.2rem 0;
+            padding-right: 40px;
+          }
+          p {
+            color: $white;
+
+          }
+          .wrapper{
+            vertical-align: middle;
+          }
+            .item{
+                  padding-top: 6rem;
+            };
+          ul{
+            list-style-position: outside;
+            margin-left: 16px;
+          }
+          li{
+            font-size:1.6rem;
+            margin:0;
+            padding:0 0 1.6rem 0;
+            line-height:2.4rem;
+            font-family: $font-family-semiBold;
+            @media #{$breakpoint-md} {
+                font-size:1.8rem;
+          }
+        }
+    }
+
+    .article04-4{
+      position: relative;
+      width:100%;
+    }
+
+
+
+// BOX 3
+// CHECKLIST: SECTION 5: TAB 5;
+
+
+
+#box03{
+  .hero-content{
+    padding:15rem 0 11rem 0;
+  }
+    .article05-1{
+      position: relative;
+        .bcg{
+          background-image: url('../img/src/segment-5-checklist01.png');
+        }
+    }
+
+    .article05-2{
+      .header-container{
+          background-color: black;
+        }
+        header {
+          h3{
+          color: $white;
+
+          }
+        }
+        h3 {
+          color: $black;
+          font-family: $font-family-bold;
+          margin: 0 0 2.2rem 0;
+          line-height: 48px;
+        }
+        p {
+          color: $black;
+
+        }
+
+        .item01{
+          background-color:#f5f5f5;
+          .flex-container{
+              margin-left: 100px;
+
+          }
+          .bcg{
+            background-image: url('../img/src/segment-5-checklist02.png');
+            position: relative;
+          }
+          .tickbox{
+            left:94px;
+          }
+        }
+      }
+
+      .article05-3{
+        .header-container{
+            background-color: black;
+          }
+          h3 {
+            color: $black;
+            font-family: $font-family-bold;
+            margin: 0 0 9.2rem 0;
+            line-height: 48px;
+          }
+          p {
+            color: $black;
+
+          }
+
+          .item01{
+            background-color:#f5f5f5;
+            .bcg{
+              background-image: url('../img/src/segment-5-checklist03.png');
+              position: relative;
+              background-position: left;
+            }
+          .tickbox{
+              left: -43px;
+              top: 2px;
+            }
+          }
+      }
+
+      .article05-4{
+      .header-container{
+          background-color: black;
+        }
+        h3 {
+          color: $black;
+          font-family: $font-family-bold;
+          margin: 0 0 9.2rem 0;
+          line-height: 48px;
+        }
+        p {
+          color: $black;
+
+        }
+
+        .item01{
+          background-color:#f5f5f5;
+            .flex-container{
+              margin-left: 100px;
+
+          }
+          .bcg{
+            background-image: url('../img/src/segment-5-checklist04.png');
+            position: relative;
+            background-position: right;
+          }
+          .tickbox{
+            left:94px;
+          }
+        }
+      }
+      .article05-5{
+      .header-container{
+          background-color: black;
+        }
+        h3 {
+          color: $black;
+          font-family: $font-family-bold;
+          margin: 0 0 9.2rem 0;
+          line-height: 48px;
+        }
+        p {
+          color: $black;
+
+        }
+
+        .item01{
+          background-color:#f5f5f5;
+          .bcg{
+            background-image: url('../img/src/segment-5-checklist05.png');
+            position: relative;
+            background-position: left;
+          }
+          .tickbox{
+              left: -43px;
+              top: 2px;
+            }
+        }
+      }
+      .article05-6{
+      .header-container{
+          background-color: black;
+        }
+        h3 {
+          color: $black;
+          font-family: $font-family-bold;
+          margin: 0 0 9.2rem 0;
+          line-height: 48px;
+        }
+        p {
+          color: $black;
+
+        }
+
+        .item01{
+          background-color:#f5f5f5;
+            .flex-container{
+              margin-left: 100px;
+                }
+          .bcg{
+            background-image: url('../img/src/segment-5-checklist06.png');
+            position: relative;
+            background-position: right;
+          }
+          .tickbox{
+            left:94px;
+          }
+        }
+      }
+}
+
+#box04{
+  .container{
+    height: calc(100vh - 98px);
+    .wrapper{ 
+      width: 100%;
+      height: 100%; 
+      padding: 0rem 1.6rem 0rem 1.6rem;
+      @media #{$breakpoint-md} {
+        padding: 0rem 11.4rem 0rem 11.4rem;
+      }
+    }
+  }
+
+  header.heading{
+    position: absolute; 
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1{
+      padding:0;
+      margin: 0; 
+      color:$white;
+      text-align: center;
+    }
+  }
+
+  .parallax-container{
+    width: 100%; 
+    position: relative;
+    overflow: hidden;
+  }
+    .parallax-wrapper{  
+      position: relative;
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &.side-left{
+        display: flex;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        //transform: translateY(90%);
+        .bcg{
+          width: 438px;
+          height: 438px;
+          position: relative;
+          margin:.6rem .6rem .6rem 0;
+        }
+        .parallax01{
+          background-image: url('../img/src/segment-6-contact01-left.jpg');
+        }
+        .parallax02{
+          background-image: url('../img/src/segment-6-contact02-left.jpg');
+        }
+        .parallax03{
+          background-image: url('../img/src/segment-6-contact03-left.jpg');
+        }
+      }
+      &.side-right{
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        //transform: translateY(-90%);
+        .bcg{
+          width: 438px;
+          height: 438px;
+          position: relative;
+          margin:.6rem 0 .6rem .6rem;
+        }
+        .parallax01{
+          background-image: url('../img/src/segment-6-contact01.jpg');
+        }
+        .parallax02{
+          background-image: url('../img/src/segment-6-contact02.jpg');
+        }
+        .parallax03{
+          background-image: url('../img/src/segment-6-contact03.jpg');
+        }
+      }
+
+        
+    }
+
+    .contact-container { 
+      position: absolute; 
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      .header-container {
+        padding:0 0 0 0;
+        height: auto;
+      }
+      .contact-top {
+        text-align: center;
+        height: 60vh;
+        background-color: black;
+        color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        width: 65%;
+        margin: auto;
+          h4{
+            align-items: center;
+          }
+      }
+      .contact-bottom {
+        width: 100%;
+        height: 40vh;
+        background-image: linear-gradient(to left, #00aea9, #0e99f0);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        .profile-wrapper{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          .profile-image { 
+            height: 135px;
+            width: 135px;
+            border: 1px solid red;
+            margin:0 2rem 0 0;
+            display: block;
+          }
+          .profile-info {
+            display: flex;
+            flex-direction: column; 
+            align-items: flex-start; 
+            a{
+              color: black;
+              &:hover{
+                color: $white;
+              }
+            }
+            .profile-info-p {
+                  width: 57%;
+            }
+          }
+        }
+      } 
+    }
+}
+
+.linkedin-icon {
+  background-image: url('../img/src/linkedin-icon.svg');
+  width: 38px;
+  height: 33px; 
+}
+
+.item01{
+  margin-top: 15rem;
+}
+
+
+       
+
+.box-container {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    padding-top: 98px;
+    .box {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      position: relative;
+      top: .0rem;
+      padding:0;
+      @media #{$breakpoint-md} {
+        top: .0rem; 
+      } 
+      &.is-hidden {
+        display: none;
+        opacity:0;
+        visibility:hidden;
+      }
+
+      &.active{
+        header h1{
+          opacity:1;
+          visibility:visible;
+        }
+        .copy{
+          opacity:1;
+          visibility:visible;
+        }
+        .parallax{
+          opacity:1;
+          visibility:visible;
+        }
+      }
+    }
+}
+
+
+.article-container{
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding-top: 22px;
+}
+
+
+

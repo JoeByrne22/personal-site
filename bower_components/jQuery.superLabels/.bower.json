@@ -1,0 +1,14 @@
+{
+  "name": "jQuery.superLabels",
+  "homepage": "https://github.com/remybach/jQuery.superLabels",
+  "version": "2.0.3",
+  "_release": "2.0.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "2.0.3",
+    "commit": "28c21e25cf20bf72414b8b3183809229af5403a6"
+  },
+  "_source": "https://github.com/remybach/jQuery.superLabels.git",
+  "_target": "~2.0.3",
+  "_originalSource": "jQuery.superLabels"
+}

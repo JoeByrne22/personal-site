@@ -1,0 +1,255 @@
+body {
+  background-color: black
+}
+
+
+.fs {
+    height: 100vh;
+}
+
+.fs87 {
+    height: 87vh;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+br{
+  display: none;
+  @media #{$breakpoint-md} {
+    display: block;
+  }
+}
+// ul{
+//   list-style: none;
+// }
+
+.lightest{
+  background:$lightest;
+}
+.lightgrey{
+  background:$lightgrey;
+  color: $grey;
+}
+.whitebg{
+  background:$white;
+}
+.darkest{
+  background:$darkest;
+}
+.midgrey{
+  background: $medgrey;
+}
+.gradient{
+  background-image: linear-gradient(to left, #4998c5, #71bbbb);
+}
+video.video{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-color: black;
+  background-image: url('../img/src/hero.jpg');
+  background-position: left center;
+  background-repeat: no-repeat;
+  z-index:0;
+  background-size: cover;
+  object-fit: cover;
+  z-index:0;
+
+  @media #{$breakpoint-md} {
+    background-size: cover;
+    object-fit: contain;
+    top:0px;
+  }
+
+}
+h3{
+  .line{
+    position: absolute;
+    width:70px;
+    height:2px;
+    background-color: $blue;
+    left:0;
+    bottom:-2rem;
+  }
+}
+
+
+.tickbox {
+    background-image: url('../img/src/tickbox.png');
+    height: 34px;
+    width: 39px;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 40px;
+}
+
+#progression-bar {
+
+  height: 229px;
+  object-fit: contain;
+  background-image: linear-gradient(to left, #00aea9, #0e99f0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progression-bar-btn {
+  width: 182px;
+  height: 45px;
+}
+
+
+
+.bg-fit{
+    position: relative;
+    height: 100%;
+    width:100%;
+    img{
+        @include get-all-space;
+        height: 100%;
+    }
+}
+.container{
+  width: 100%;
+  max-width: 144.00rem;
+  margin:0 auto;
+  position: relative;
+  height: 100%;
+}
+.container-fullwidth{
+    width: 100%;
+    margin:0 auto;
+    position: relative;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+.wrapper {
+    margin: 0;
+    position: relative;
+}
+
+#preloader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 101;
+    background-color: rgba(0, 0, 0, 1);
+    color: $lightest;
+    .txt {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .txt-perc {
+        font-size: 35px;
+        opacity: 1;
+        margin: 0 0 6px 0;
+        max-width: 400px;
+        text-align: center;
+        color:$white;
+    }
+    .progress {
+        width: 100px;
+        height: 3px;
+        background-color: rgba(255, 255, 255, 0.2);
+        margin: 0 auto 15px auto;
+        span {
+            display: block;
+            width: 0;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+    }
+    &.is-hidden {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+.is-loading {
+    overflow: hidden;
+}
+ 
+
+.close-contactspage {
+  position: absolute;
+  top:9rem;
+  right:6rem;
+  margin: auto;
+  width: 40px;
+  cursor: pointer;
+  z-index: 5;
+  .inner {
+    width: inherit;
+    text-align: center;
+  }
+
+  label {
+    font-size: 1.2rem;
+    line-height: 4em;
+    text-transform: uppercase;
+    color: $darkest;
+    transition: all .3s ease-in;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .inner:before, .inner:after {
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: inherit;
+    background: $orange;
+    left: 0;
+    transition: all .3s ease-in;
+  }
+
+  .inner:before {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+
+  .inner:after {
+    bottom: 50%;
+    transform: rotate(-45deg);
+  }
+
+  &.outer:hover label {
+    opacity: 1;
+  }
+
+  &.outer:hover .inner:before,
+  &.outer:hover .inner:after {
+    transform: rotate(0);
+  }
+
+  &.outer:hover .inner:before {
+    top: 0;
+  }
+
+  &.outer:hover .inner:after {
+    bottom: 0;
+  }
+}
+
+.article{
+  &.is-hidden {
+    display: none;
+    opacity:0;
+    visibility:hidden;
+  }
+}
+ 
+

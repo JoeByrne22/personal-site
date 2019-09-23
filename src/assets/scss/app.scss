@@ -1,0 +1,39 @@
+
+@import 'helpers/variables';
+  
+//----------------------------------*\
+// BASS SCSS
+//----------------------------------*/
+@import '../../../bower_components/basscss-sass/scss/basscss';  
+ 
+//----------------------------------*\
+// SCSS MIXINS
+//----------------------------------*/
+@import 'mixins/mixins.scss';
+
+//----------------------------------*\
+// SCSS BASE
+//----------------------------------*/
+@import 'base/normalize.scss'; 
+@import 'base/resets.scss'; 
+@import 'base/typography.scss';
+
+
+//----------------------------------*\
+// SCSS INCLUDES
+//----------------------------------*/
+@import 'includes/icons';
+@import 'includes/global';
+@import 'includes/sprites';
+
+
+
+//----------------------------------*\
+// PARTIALS
+//----------------------------------*/
+@import 'partials/_header.scss';
+@import 'partials/_footer.scss';
+@import 'partials/_main.scss'; 
+@import 'partials/_buttons.scss';
+@import 'partials/_navigation.scss';
+@import 'partials/_cover-image.scss';

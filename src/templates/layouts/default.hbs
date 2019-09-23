@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE 9]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141695843-1"></script>
+	<script>
+	//   window.dataLayer = window.dataLayer || [];
+	//   function gtag(){dataLayer.push(arguments);}
+	//   gtag('js', new Date());
+
+	//   gtag('config', 'UA-141695843-1');
+	// </script>
+
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	{{#is page.basename 'CoreHR'}}
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	{{else}}
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+	{{/is}}
+
+	<title>{{global.title}}</title>
+
+	{{!-- <link href="/assets/css/app.css" rel="stylesheet"> --}}
+	<link  rel="stylesheet" href="assets/css/app.css">
+	<script src="assets/js/modernizr.js"></script>
+
+</head>
+<body data-site-title="CoreHR">
+
+<!--[if lt IE 9]>
+	<div class="browsehappy">
+		<p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	</div>
+<![endif]-->
+<div id="preloader">
+	<div class="txt">
+        <p class="txt-perc">0%</p>
+        <div class="progress"><span></span></div>
+    </div>
+</div>
+	<a href="#mainContent" class="skip hide" tabindex="1">skip to main content</a>
+
+	<div class="site-wrapper">
+		<div class="site-canvas">
+			{{!-- Page content --}}
+			<div id="mainContent" class="page-{{page.basename}}">
+				{{> body }}
+			</div>
+		</div>
+	</div> 
+
+	
+	<script src="assets/js/vendor.js"></script>
+	<script src="assets/js/app.js"></script>
+
+
+
+</body>
+</html>

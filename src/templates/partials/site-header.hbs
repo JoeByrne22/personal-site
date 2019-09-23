@@ -1,0 +1,44 @@
+<header class="header">
+	<div class="wrap-header">
+ 
+		<nav class="anchor-nav flex flex-wrap" role="navigation" id="navigation">
+ 
+			<div class="container">
+				<div class="wrapper">
+					<h1>
+						<a href="#intro" class="logo client">CoreHR</a>
+					</h1>
+
+					<ul class="tabs" style="list-style: none">
+					{{#each global.navItems}}
+						{{#each subnav}}
+							<li class="{{slug}}" id="{{target}}" data-target="{{target}}">
+								<span class="nav-head">{{title}}</span>
+								{{#if subnav}}
+									<div class="subnav">
+										<ul>
+										{{#each subnav}}
+											<li class="nav-navItem">
+											<span id="{{target}}" class="{{slug}}" data-target="{{target}}">{{title}}</span>
+											</li>
+										{{/each}}
+										</ul>
+									</div>
+								{{/if}}
+							</li>
+						{{/each}}
+					{{/each}}	
+					</ul> 
+				</div>
+			</div>
+		</nav>
+	
+		</div>
+
+		<a href="#" class="open-button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+	</div>
+</header>

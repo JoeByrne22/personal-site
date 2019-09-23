@@ -1,0 +1,144 @@
+@font-face {
+    font-family: "ProximaNova-bold";
+    src: url(https://2o0xkq4bshwn1yteh12jbgoq-wpengine.netdna-ssl.com/wp-content/uploads/et-fonts/ProximaNova-Bold.otf) format("opentype")
+}
+
+@font-face {
+    font-family: "ProximaNova-Regular";
+    src: url(https://2o0xkq4bshwn1yteh12jbgoq-wpengine.netdna-ssl.com/wp-content/uploads/et-fonts/ProximaNova-Regular.otf) format("opentype")
+}
+
+@font-face {
+    font-family: "ProximaNova Cond-Regular";
+    src: url(https://2o0xkq4bshwn1yteh12jbgoq-wpengine.netdna-ssl.com/wp-content/uploads/et-fonts/ProximaNovaCond-Regular.otf) format("opentype")
+}
+
+@font-face {
+    font-family: "ProximaNova-semibold";
+    src: url(https://2o0xkq4bshwn1yteh12jbgoq-wpengine.netdna-ssl.com/wp-content/uploads/et-fonts/ProximaNova-Semibold.otf) format("opentype")
+}
+
+
+$font-family-regular: 'ProximaNova-Regular';
+$font-family-bold: 'ProximaNova-bold';
+$font-family-semiBold: 'ProximaNova-semibold';
+
+
+html {
+  font-size: calc(1em * .625);
+  font-family:$font-family-regular;
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: $font-family-regular, Helvetica, Helvetica Neue, Arial, sans-serif;
+  color: $black; 
+  font-size: 1.8rem;
+  background:$white;
+  font-weight: 400;
+}
+
+.blue{
+    color: #4998c5;
+}
+.red{
+    color:$red;
+}
+.orange{
+    color:$orange;
+}
+.yellow{
+    color:$yellow;
+}
+.black{
+    color:$black;
+}
+.grey{
+    color:$grey;
+}
+.white{
+    color:$white;
+}
+ 
+a {
+  color: $red;
+  text-decoration: none;
+}
+p{
+    font-size:1.6rem;
+    margin:0;
+    padding:0 0 1.6rem 0;
+    line-height:2.4rem;
+    @media #{$breakpoint-md} {
+        font-size:1.8rem;
+    }
+}
+strong{
+    font-weight: 600;
+}
+
+em, .italic{
+    font-weight: 400;
+    font-style: italic;
+}
+
+h1 {
+    font-size: 3.0rem;
+    margin-top: 0;
+    line-height: 1;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    font-family:$font-family-bold;
+    font-weight: normal; 
+    letter-spacing: -0.43px;
+    @media #{$breakpoint-md} {
+        margin-bottom: 4.2rem;
+        font-size: 7.0rem;  
+        
+    }
+}
+
+
+h2 {
+    font-size: 2.0rem;
+    margin: 0;
+    line-height: 1.33;
+    margin-bottom: 2.0rem; 
+    font-weight: normal;
+    font-family:$font-family-bold;
+    @media #{$breakpoint-md} {
+        font-size: 5.5rem;
+        margin-bottom: 2.8rem;
+    }
+}
+
+
+h3 {
+    font-size: 2.0rem;
+    margin: 0 0 1.6rem 0;
+    font-weight: 500;
+    line-height:2.4rem;
+    font-family:$font-family-regular;
+    font-weight: normal;
+    position: relative;
+      @media #{$breakpoint-md} {
+        margin: 0 0 2.2rem 0;
+        line-height:3.2rem;
+        font-size: 4rem;
+
+    }
+}
+
+
+h4 {
+    font-size: 1.8rem;
+    margin: 0; 
+    line-height: 1.13;
+    font-family:$font-family-semiBold;
+    font-weight: normal;
+    @media #{$breakpoint-md} {
+        font-size: 2.4rem;
+        margin: 0 0 1.6rem 0; 
+    }
+}

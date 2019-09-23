@@ -1,0 +1,59 @@
+footer.footer{
+  background: $darkest;
+  .wrapper{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    @media #{$breakpoint-md} {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+  }
+  p{
+    font-size: 1.3rem;
+    color: $white;
+    display: block;
+    padding:0;
+    a{
+      text-decoration: underline;
+    }
+
+  }
+  h1{
+    padding:0;
+    margin:0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    a{
+      position: relative;
+      padding: 1.5rem 0 1.5rem 0.0rem;
+      background-position: 0 center;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      display:block;
+      text-indent:-999em;
+      z-index: 6;
+
+      &.logo{
+        background-image: url('../img/logo/oracle-logo.svg');
+        background-size: auto;
+        width: 100px;
+        height: 15px;
+        object-fit: contain;
+        fill: $white;
+      }
+    }
+  }
+}
+
+
+.footer-container {
+  height: 50px;
+  display: flex;
+  .policies {
+    display: flex;
+    width: 80%;
+    text-align: center;
+  }
+
+}

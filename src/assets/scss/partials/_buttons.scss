@@ -1,0 +1,102 @@
+.buttons{
+	position: relative;
+	padding: 1rem 0rem 1rem  0rem;
+	display:flex;
+	flex-wrap: wrap;
+	@media #{$breakpoint-md} {
+		display: block;
+	}
+	.btn {
+		font-size: 1.8rem;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: normal;
+		text-align: center; 
+		text-decoration: none;
+		transition:all .4s ease-out;
+		position: relative;
+		cursor: pointer;
+		margin-bottom: 1.6rem;
+		margin-left: 0;
+		margin-right: 0;
+		padding:1.2rem 4.6rem 1.2rem 4.6rem;
+		border-radius: 3.2px;
+
+		&.primary { 
+			background:$black;
+			color: $white; 
+			
+			@media #{$breakpoint-md} {
+				margin-left: auto;
+				margin-right: auto;	
+				margin-bottom: 0;
+			}
+			&:hover{
+				background: $darkest;
+				color: $white;
+			}
+			& + .primary{
+				margin-left: 0;
+				@media #{$breakpoint-md} {
+					margin-left: 2.0rem;	
+				}
+			}
+		}
+		&.secondary { 
+			background:$white;
+			color: $black; 
+		}
+	}
+	input{
+		border:0;
+	}
+}
+a{
+&.cta{
+	color:$red;
+	font-size: 1.4rem;
+	text-decoration: underline;
+	&.download{
+		text-decoration: none;
+		color:$medgrey;
+		padding-left: 3.0rem;
+		position: relative;
+		&.white{
+			color:$white;
+		}
+		&:before{
+			content: "";
+			position: absolute;
+			left:0;
+			top: -2px;
+			background: url('../img/src/download_icon.svg');
+			background-repeat: no-repeat;
+			width: 21px;
+			height: 21px;
+			font-size: 1.4rem;
+		}
+	}
+	&.grey{
+    	color:$grey;
+	}
+}
+}
+
+#btncontacts {
+  width: 110px;
+  height: 37px;
+  background-color: #ea5522;
+}
+
+.btncontacts {
+  	  width: 85px;
+  height: 13px;
+  font-family: $font-family-semiBold;
+  font-size: 18px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.72;
+  letter-spacing: normal;
+  color: #ffffff;
+  }

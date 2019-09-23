@@ -1,0 +1,2 @@
+// define jQuery
+jQuery(function($){

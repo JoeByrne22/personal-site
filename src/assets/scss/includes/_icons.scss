@@ -1,0 +1,170 @@
+@font-face {
+	font-family: "icons";
+	src: url('../fonts/icons.eot');
+	src: url('../fonts/icons.eot?#iefix') format('eot'),
+		url('../fonts/icons.woff') format('woff'),
+		url('../fonts/icons.ttf') format('truetype'),
+		url('../fonts/icons.svg#icons') format('svg');
+}
+
+@mixin webfont-styles {
+	display: inline-block;
+	height: inherit;
+	margin:0 0.2rem;
+	font-size: 100%;
+	font-family: "icons";
+	font-variant: normal;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	text-decoration: inherit;
+	text-align: center;
+	text-transform: none;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+[class^="webfont-"],
+[class*=" webfont-"],
+.webfont {
+	display: inline-block;
+
+	&:before {
+		@include webfont-styles;
+	}
+}
+
+@function webfont-char($filename) {
+	$char: "";
+
+	@if $filename == "1-icon-shape" {
+		$char: "\E001";
+	}
+	@if $filename == "2-market-icon" {
+		$char: "\E002";
+	}
+	@if $filename == "3-next-generation-icon" {
+		$char: "\E003";
+	}
+	@if $filename == "4-areas" {
+		$char: "\E004";
+	}
+	@if $filename == "4-erp-icon-shape" {
+		$char: "\E005";
+	}
+	@if $filename == "5-hr-icon-group" {
+		$char: "\E006";
+	}
+	@if $filename == "6-contact-icon" {
+		$char: "\E007";
+	}
+	@if $filename == "Download" {
+		$char: "\E008";
+	}
+	@if $filename == "arrow-link-out" {
+		$char: "\E009";
+	}
+	@if $filename == "arrow-long" {
+		$char: "\E00A";
+	}
+	@if $filename == "arrow-longer" {
+		$char: "\E00B";
+	}
+	@if $filename == "arrow-short" {
+		$char: "\E00C";
+	}
+	@if $filename == "arrow" {
+		$char: "\E00D";
+	}
+	@if $filename == "cheveron-thin" {
+		$char: "\E00E";
+	}
+	@if $filename == "cheveron" {
+		$char: "\E00F";
+	}
+	@if $filename == "close" {
+		$char: "\E010";
+	}
+	@if $filename == "download_icon" {
+		$char: "\E011";
+	}
+	@if $filename == "icon-email" {
+		$char: "\E012";
+	}
+	@if $filename == "play-button" {
+		$char: "\E013";
+	}
+	@if $filename == "plus" {
+		$char: "\E014";
+	}
+
+	@return $char;
+}
+
+@mixin webfont($filename, $insert: before) {
+	&:#{$insert} {
+		content: webfont-char($filename);
+	}
+}
+
+.webfont-1-icon-shape {
+	@include webfont("1-icon-shape");
+}
+.webfont-2-market-icon {
+	@include webfont("2-market-icon");
+}
+.webfont-3-next-generation-icon {
+	@include webfont("3-next-generation-icon");
+}
+.webfont-4-areas {
+	@include webfont("4-areas");
+}
+.webfont-4-erp-icon-shape {
+	@include webfont("4-erp-icon-shape");
+}
+.webfont-5-hr-icon-group {
+	@include webfont("5-hr-icon-group");
+}
+.webfont-6-contact-icon {
+	@include webfont("6-contact-icon");
+}
+.webfont-Download {
+	@include webfont("Download");
+}
+.webfont-arrow-link-out {
+	@include webfont("arrow-link-out");
+}
+.webfont-arrow-long {
+	@include webfont("arrow-long");
+}
+.webfont-arrow-longer {
+	@include webfont("arrow-longer");
+}
+.webfont-arrow-short {
+	@include webfont("arrow-short");
+}
+.webfont-arrow {
+	@include webfont("arrow");
+}
+.webfont-cheveron-thin {
+	@include webfont("cheveron-thin");
+}
+.webfont-cheveron {
+	@include webfont("cheveron");
+}
+.webfont-close {
+	@include webfont("close");
+}
+.webfont-download_icon {
+	@include webfont("download_icon");
+}
+.webfont-icon-email {
+	@include webfont("icon-email");
+}
+.webfont-play-button {
+	@include webfont("play-button");
+}
+.webfont-plus {
+	@include webfont("plus");
+}

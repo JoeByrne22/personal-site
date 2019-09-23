@@ -1,0 +1,153 @@
+header.header{
+  width: 100%;
+	display:flex;
+	justify-content: center;
+	position: absolute;
+	top:0;
+	z-index: 6;
+  transition: background 500ms ease 0s;
+	.wrap-header{
+		width: 100%; 
+    position:relative;
+    display:flex;
+
+	}
+	h1{
+		padding:0;
+		margin:0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+		a{
+      position: relative;
+      padding: 1.5rem 0 1.5rem 0.0rem;
+      background-position: 0 center;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      display:block;
+      text-indent:-999em;
+      z-index: 6;
+      @media #{$breakpoint-md} {
+        padding: 1.5rem 0 1.5rem 0.0rem;
+      }
+
+      &.logo.client{
+        background-image: url('../img/logo/core-hr.svg');
+        width: 177px;
+        height: 64px;
+        object-fit: contain;
+        color: black;
+      }
+      &.logo.oracle{
+        background-image: url('../img/logo/oracle-logo.svg');
+        background-size: auto;
+        width: 100px;
+        height: 15px;
+        object-fit: contain;
+        fill: $white;
+        margin-right: 5rem;
+        @media #{$breakpoint-md} {
+          margin-right: 4rem;
+          background-image: url('../img/logo/oracle-logo.svg');
+          margin:0;
+        }
+      }
+		}
+	}
+
+    .contacts{
+      position: absolute;
+      right: 174px;
+      top:0;
+      height:100%;
+      display: flex;
+      align-items: center;
+      opacity: 0;
+      visibility: hidden;
+      @media #{$breakpoint-md} {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      span{
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: $white;
+        cursor: pointer;
+
+        &.btn{
+          padding-right: 1.6rem;
+          position: relative;
+        }
+      }
+    }
+  }
+
+  .open-button {
+    width: 30px;
+    height: 30px;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    position: absolute;
+    cursor: pointer;
+    border-bottom: 0;
+    top: 1.9rem;
+    right: 2rem;
+    z-index: 6;
+    border-bottom: 0;
+    @media #{$breakpoint-md} {
+      opacity: 0;
+      visibility: hidden;
+      //display: none;
+    }
+  &:hover {
+    border-bottom: 0;
+  }
+}
+
+.open-button span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: $gradient;
+  border-radius: 2px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+
+}
+
+.open-button span:nth-child(1) {
+  top: 0px;
+  transform-origin: left center;
+}
+
+.open-button span:nth-child(2) {
+  top: 10px;
+  transform-origin: left center;
+}
+
+.open-button span:nth-child(3) {
+  top: 20px;
+  transform-origin: left center;
+}
+
+.open-button.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: -3px;
+  left: 8px;
+}
+
+.open-button.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.open-button.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 19px;
+  left: 8px;
+}

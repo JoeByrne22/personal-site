@@ -1,0 +1,82 @@
+{
+	"title": "Agility and Ingenuity, Together",
+
+	"navItems": [
+		{
+			"subnav": [
+				{
+					"title": "Technology for new growth",
+					"slug": "tile but section01",
+					"target": "box01"
+				},
+				{
+					"title": "Retail opportunities",
+					"slug": "tile but section02 hassubnav",
+					"target": "box02",
+					"href": "box02",
+					"subnav": [
+								{
+										"title": "Seize the moment and start cutting cost",
+										"slug": "btnarticle nav-navLink active",
+										"target": "article01"
+								},
+								{
+										"title": "Boost productivity and cut churn",
+										"slug": "btnarticle nav-navLink",
+										"target": "article02"
+								},
+								{
+										"title": "The retail sector helps build our product",
+										"slug": "btnarticle nav-navLink",
+										"target": "article03"
+								},
+								{
+										"title": "Faster value for a bigger future",
+										"slug": "btnarticle nav-navLink",
+										"target": "article04"
+								}
+						]
+				},
+				{
+					"title": "Checklist",
+					"slug": "tile but section03",
+					"target": "box03"
+				},
+				{
+					"title": "Contact",
+					"slug": "tile but contact",
+					"target": "box04"
+				}
+			]
+
+		}
+	],
+
+
+	"teamItems": [
+		{
+			"items": [
+				{
+					"imgsrc": "assets/img/src/team-image-2.jpg",
+					"name": "STEVE MIRANDA",
+					"position": "EVP Application Development"
+				},
+				{
+					"imgsrc": "assets/img/src/team-image-5.jpg",
+					"name": "SAFRA KATZ",
+					"position": "CEO"
+				},
+				{
+					"imgsrc": "assets/img/src/team-image-7.jpg",
+					"name": "LOREN MAHON",
+					"position": "VP Finance Systems"
+				},
+				{
+					"imgsrc": "assets/img/src/team-image-8.jpg",
+					"name": "JOHN SHORTER",
+					"position": "VP ERP & SCM Transformation"
+				}
+			]
+		}
+	]
+}

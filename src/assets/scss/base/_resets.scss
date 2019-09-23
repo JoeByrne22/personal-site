@@ -1,0 +1,94 @@
+/**
+ * Global settings
+ */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+// Remove tap highlight on iOS
+* {
+  -webkit-tap-highlight-color: $transparent;
+}
+
+/**
+ * Media
+ */
+img {
+  height: auto;
+}
+
+/**
+ * Forms
+ */
+// Input field reset
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+ 
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+figure,
+figcaption,
+blockquote,
+fieldset, ul,li{
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+input{
+  font-size:1.6rem;
+  display:block;
+  border:0;
+  background:none;
+  padding:  1.6rem;
+}
+::placeholder {
+  opacity: 1;
+  color: $darkest;
+  transition: all 0.4s ease-out;
+}
+input:placeholder{
+  transition: all 0.4s ease-out;
+  opacity: 1;
+}
+input:focus::placeholder{
+  opacity: 0.5;
+}

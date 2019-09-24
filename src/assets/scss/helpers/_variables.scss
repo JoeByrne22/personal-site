@@ -2,7 +2,7 @@ $transparent: rgba(0, 0, 0, 0);
 $lightest: rgba(47, 55, 59, 0.2);
 $darkest: #2f373b;
 $medgrey: #4a4a4a;
-$black: #111111;
+$black: #000;
 $lightgrey: #f0f0f0;
 $grey: #737373;
 $white: #ffffff;
@@ -19,5 +19,7 @@ $orangeHover:  #FFA100;
 
 //
 $clientColour: #ea5522;
+$clientColourHover: #af411a;
+ 
 
 $gradient: linear-gradient(to left, #4998c5, #71bbbb);

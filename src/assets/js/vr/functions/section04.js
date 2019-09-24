@@ -6,7 +6,7 @@
 
 
      TweenMax.set("#box04 .heading h1", {scale:0.8, autoAlpha:1, ease: Linear.easeNone})
-     TweenMax.set("#box04 .side-left", {force3D:true, y: '90%',  ease: Linear.easeNone})
+     TweenMax.set("#box04 .side-left", {force3D:true, y: '72%',  ease: Linear.easeNone})
      TweenMax.set("#box04 .side-right", {force3D:true, y:' -90%',  ease: Linear.easeNone})
      TweenMax.set("#box04 .contact-container", {autoAlpha:0, ease: Linear.easeNone})
 

@@ -91,7 +91,7 @@ nav.anchor-nav{
 
 
     >li{  
-        font-size: 1.8rem;
+        font-size: 1.4rem;
         cursor: pointer;
         line-height: 18px;
         transition: all .4s ease-out;
@@ -103,14 +103,19 @@ nav.anchor-nav{
         span{
           transition: all .4s ease-out;
         }
-        &.contact{
-          background-color: $clientColour;
+
+        &.contact{ 
+          display: flex;
+          align-items: center;
+          padding: 0 0 0 2.4rem;
           span{
+            background-color: $clientColour;
+            padding: .5rem 2.4rem;
             color:$white;
           }
-          &:hover{
-            background-color: rgba($clientColour, 0.6);
+          &:hover{ 
             span{
+              background-color: rgba($clientColourHover, 1);
               color:$white;
             }
             
@@ -209,7 +214,7 @@ nav.anchor-nav{
             flex-direction: row;
          }
       li{
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         padding: 1.6rem 3rem 1.6rem 3rem;
         cursor: pointer;
         transition: all 0.4s ease-out;
@@ -217,9 +222,9 @@ nav.anchor-nav{
         text-align: left;
         &:first-child{
           padding: 1.6rem 3rem 1.6rem 3rem;
-                   @media #{$breakpoint-md} {  
-                padding: 1.6rem 3rem 1.6rem 0rem;
-              }
+          @media #{$breakpoint-md} {  
+            padding: 1.6rem 3rem 1.6rem 0rem;
+          }
 
         }
         &:last-child{
@@ -229,9 +234,9 @@ nav.anchor-nav{
 
         span{ 
             font-family:$font-family-regular;
-            font-size: 14px;
             letter-spacing: 2.33px;
             color: $white;
+            display: block;
             &.active{
                  font-weight: bold;
                  font-family:$font-family-bold;

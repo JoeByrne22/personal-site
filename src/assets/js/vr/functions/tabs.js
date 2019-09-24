@@ -3,6 +3,7 @@ var tabs = {
 
         //general click tabs event
 
+        var paginationLink = $( '.paginationlink' );
         var boxLink = $( '.but' );
         var box = $( '.box' );
 
@@ -13,13 +14,15 @@ var tabs = {
             var currentbox = $('.box:not(.is-hidden)');
             var targetBox = $('.box#' + boxID);
 
-           // if (!$(this).hasClass('active'))    {
-                console.log('active')
+             
+
+           if (!$(this).hasClass('active'))    {
+                
                 boxLink.removeClass('active');
                 $(this).addClass('active');
 
                 TweenMax.to(currentbox, 0.2, {ease:Power4.easeOut, className: '-=visible', autoAlpha: 0,  onComplete: boxIn, onCompleteParams: [targetBox] });
-            //} 
+            } 
            
             return false;
         });
@@ -30,21 +33,19 @@ var tabs = {
 
             TweenMax.to( targetBox, 0.2, {autoAlpha: 1,className: '+=visible', ease:Power4.easeIn});
 
-                if ((targetBox).is('.box04')) { 
-                    section04.init(); 
-                }
+            if ((targetBox).is('.box04')) { 
+                section04.init(); 
+            }
 
-                if ((targetBox).is('.box02')) {
-                } else {
-                    $('.mobile .open').removeClass('open');
-                    $(".mobile header.header").removeClass('open');
-                    $(".mobile .anchor-nav").removeClass('open');
-                }
-               
-
-                 
+            if ((targetBox).is('.box02')) {
+            } else {
+                $('.mobile .open').removeClass('open');
+                $(".mobile header.header").removeClass('open');
+                $(".mobile .anchor-nav").removeClass('open');
+            }
         }
 
+ 
 
         //SECTION02 tabs for subnav
         ////////////////

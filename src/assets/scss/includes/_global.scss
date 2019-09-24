@@ -1,54 +1,7 @@
-body {
-
-      background-color: black;
-    }
-
-.arrow-left {
-  background-image: url('../img/src/left-arrow.svg');
-  height: 25px;
-  width: 18px;
-  background-repeat: no-repeat;
+body { 
+  background-color: $black;
 }
-.arrow-right {
-  background-image: url('../img/src/right-arrow.svg');
-  height: 25px;
-  width: 18px;
-  background-repeat: no-repeat;
-}
-
-.pagination{
-  height: 151px;
-  display: flex;
-    align-items: center;
-    justify-content: center;
-    .arrow-container{
-      width: 10%;
-    }
-  span {
-      height: 20px;
-      font-family: $font-family-bold;
-      font-size: 16px;
-      text-align: center;
-      color: #ffffff;
-      display: flex;
-      flex-direction: row; 
-      cursor: pointer;
-      .next-text{
-        padding-top: 4px;
-        padding-right: 3px;
-      }
-      .prev-text {
-        padding-top: 4px;
-        padding-left: 3px;
-      }
-      &.next{
-        padding: 4.2rem 0 0 0 ;
-      }
-      &.prev{
-        padding: 4.2rem 0 0 0 ;
-      }
-  }
-} 
+  
 .fs {
     height: 100vh;
 }
@@ -94,38 +47,50 @@ br{
   color:$black;
   position: relative; 
 
-  .pins{
-    color:$black;
+  .arrow-container{
+    color:$white;
     text-decoration: none;
     position: relative;
     .prev{
+      position: relative;
       cursor: pointer;
       padding:2rem 0 2rem 4rem;
       &:before{
         content: '';
-        width: 24px;
-        height: 26px;
+        height: 25px;
+        width: 18px;
         position: absolute;
         left:0;
-        background-image: url(../img/src/arrow-left-black.svg);
+        background-image: url('../img/src/left-arrow.svg');
         background-repeat: no-repeat;
         background-position: left center;
         @include center-y;
       }
+      &:hover{
+        &:before{
+
+        }
+      }
     }
     .next{
+      position: relative;
       cursor: pointer;
       padding:2rem 4rem 2rem 0rem;
       &:before{
-        content: '';
-        width: 24px;
-        height: 26px;
+        content: ''; 
+        height: 25px;
+        width: 18px;
         position: absolute;
         right:0;
-        background-image: url(../img/src/arrow-right-black.svg);
+        background-image: url('../img/src/right-arrow.svg');
         background-repeat: no-repeat;
         background-position: right center;
         @include center-y;
+      }
+      &:hover{
+        &:before{
+
+        }
       }
     }
   }

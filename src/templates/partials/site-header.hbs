@@ -6,20 +6,20 @@
 			<div class="container">
 				<div class="wrapper">
 					<h1>
-						<a href="#intro" class="logo client">CoreHR</a>
+						<a href="#intro" class="logo client tile but section01">CoreHR</a>
 					</h1>
 
-					<ul class="tabs" style="list-style: none">
+					<ul class="tabs" >
 					{{#each global.navItems}}
 						{{#each subnav}}
-							<li class="{{slug}}" id="{{target}}" data-target="{{target}}">
+							<li class="{{slug}}" data-target="{{target}}">
 								<span class="nav-head">{{title}}</span>
 								{{#if subnav}}
 									<div class="subnav">
 										<ul>
 										{{#each subnav}}
 											<li class="nav-navItem">
-											<span id="{{target}}" class="{{slug}}" data-target="{{target}}">{{title}}</span>
+											<span   class="{{slug}}" data-target="{{target}}">{{title}}</span>
 											</li>
 										{{/each}}
 										</ul>

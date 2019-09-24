@@ -62,9 +62,15 @@ var loader = {
 			.set($('body'), {className: '-=is-loading'})
 			.set($('body'), {className: '+=is-loaded'})
 			.to($('#preloader'), 0.7, {autoAlpha: 0, ease:Power4.easeInOut})
-			.set($('#preloader'), {className: '+=is-hidden'})
-			.fromTo($('#intro .content'), 1.5, {y: -20, autoAlpha: 1}, {y: 0, autoAlpha: 1, ease:Power1.easeOut}, '-=0.2') 
-			.fromTo($('#intro .bcg'), 1.5, {y:'0%', scale:1.05, autoAlpha: 0}, {y:'0', scale:1, autoAlpha: 1, ease:Power1.easeOut}, 1)
+			.set($('#preloader'), {className: '+=is-hidden'})	
+			.fromTo($('#intro h1'), 0.5, {autoAlpha: 0}, {autoAlpha: 1, ease:Power1.easeIn}, '-=0.2') 
+			.fromTo($('#intro h4'), 0.5, {y:-18, autoAlpha: 0}, {y:0, autoAlpha: 1, ease:Power1.easeIn}, '-=0') 
+			.to($('.header'), 0.5, {autoAlpha: 1, ease:Power1.easeOut})
+			.to($('.content-sections'), 0.5, {autoAlpha: 1, ease:Power1.easeOut}) 
+			.to($('#intro'), 0.5, {autoAlpha: 0, ease:Power1.easeOut}) 
+
+
+
  			return preloaderOutTl;
 		} 
 	}

@@ -1,8 +1,10 @@
-var section04 = {
+      var section04 = {
   init: function() { 
 
 
     var controller = new ScrollMagic.Controller();
+
+
      TweenMax.set("#box04 .heading h1", {scale:0.8, autoAlpha:1, ease: Linear.easeNone})
      TweenMax.set("#box04 .side-left", {force3D:true, y: '90%',  ease: Linear.easeNone})
      TweenMax.set("#box04 .side-right", {force3D:true, y:' -90%',  ease: Linear.easeNone})
@@ -22,38 +24,27 @@ var section04 = {
 
       var scene05 = new ScrollMagic.Scene({
         triggerElement: ".box04", 
-        triggerHook:0,
+        triggerHook: 0,
         duration: '300%'
       })
-     	.on("enter", function(){
+      .on("enter", function(){
+        console.log('onEnter')
         //hero05.play(); 
       })
-
+      .on("leave", function(){
+        console.log('onLeave')
+        scene05 = scene05.destroy(true);
+        scene05 = null;
+      })
+      
       .setPin('.box04')
       .setTween(hero05)
       .addTo(controller);
 
-      var boxLink = $( '.but' );
-      var boxID = $(this).attr("data-target");
-      var targetBox = $('.box#' + boxID);
-
-
-      boxLink.click( function(e) {
-        e.preventDefault();
-
-        if ((targetBox).is('.box01')) { 
-          scene05 = scene05.destroy(true);
-        }
-        else if ((targetBox).is('.box02')) { 
-          scene05 = scene05.destroy(true);
-        }
-        else if ((targetBox).is('.box03')) { 
-          scene05 = scene05.destroy(true);
-        }
-
-      })
-
+ 
        
+ 
+     
 
   }
 }

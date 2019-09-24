@@ -1,5 +1,4 @@
-nav.anchor-nav{
-  position: absolute;
+nav.anchor-nav{ 
   top:0;
   width: 100%;
   height: 100%;
@@ -9,6 +8,12 @@ nav.anchor-nav{
   transition: all .4s ease-in;
   z-index: 2; 
   background-color: $white;
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  bottom: auto; 
+
+
   @media #{$breakpoint-md} {
     top:auto;   
     height:auto; 
@@ -34,8 +39,13 @@ nav.anchor-nav{
     align-items: center; 
     justify-content: space-between;
     width: 100%;
-    padding: 1.5rem 14.0rem 0.9rem 14.0rem;
+    padding: 1.5rem 0rem 0.9rem 0rem;
     background: $white;
+    flex-direction: column;
+    @media #{$breakpoint-md} {
+      padding: 0.5rem 14.0rem 0.5rem 14.0rem;
+      flex-direction: row;
+    }
   }
   .subnav{
     opacity: 0;
@@ -43,6 +53,7 @@ nav.anchor-nav{
     display: none;
     position: fixed;
     width: 100%;
+    top:0;
   } 
  
   &.fixed-header{ 
@@ -57,6 +68,10 @@ nav.anchor-nav{
   &.open {
     opacity: 1;
     visibility: visible;
+    position: fixed;
+    @media #{$breakpoint-md} {
+      position: absolute;
+    }
   }
   .tabs{
     position: relative;
@@ -67,15 +82,15 @@ nav.anchor-nav{
     justify-content: flex-end; 
     padding: 1.4rem 0rem;
     flex-wrap: wrap; 
- 
-
+    flex-direction: column;
+    list-style: none;
       @media #{$breakpoint-md} { 
-        justify-content: space-between;
+            flex-direction: row;
+            justify-content: space-between;
       }
 
 
-    >li{ 
-
+    >li{  
         font-size: 1.8rem;
         cursor: pointer;
         line-height: 18px;
@@ -127,16 +142,17 @@ nav.anchor-nav{
         }
      
       &.hassubnav.active{
-        // &:hover{
-
+        &:hover{
           .subnav{
             display: block;
             opacity: 1;
             visibility: visible;
-            top: 9.8rem;
+            top: 29.8rem;
             transition: top 0.3s;
-          
-
+            @media #{$breakpoint-md} { 
+              top: 7.8rem;
+            }
+          }
         }
       }
     }
@@ -145,7 +161,7 @@ nav.anchor-nav{
   .subnav{
     margin: auto;
     opacity: 0;
-    z-index: -1;
+    z-index: 0;
     visibility: hidden;
     display: none;
     position: fixed;
@@ -155,6 +171,9 @@ nav.anchor-nav{
     transition: all 0.8s ease-out;  
     background-color: $clientColour;
     color: white;
+      @media #{$breakpoint-md} { 
+        z-index: -1;
+      }
     &:before {
       z-index: 0;
       width: 100%; 
@@ -174,10 +193,10 @@ nav.anchor-nav{
     ul{ 
       max-width:  144.00rem;
       width: 100%;
-      padding: 0rem 14.0rem 0rem 14.0rem;
+      padding: 0rem 1rem 0rem 1rem;
       display: flex; 
       justify-content: center;
-      flex-direction: row;
+      flex-direction: column;
       list-style: none; 
       margin: auto; 
       background: $clientColour;
@@ -185,6 +204,10 @@ nav.anchor-nav{
       flex-wrap:nowrap;
       justify-content:  space-between;
       align-items: center;
+         @media #{$breakpoint-md} {   
+            padding: 0rem 14.0rem 0rem 14.0rem;
+            flex-direction: row;
+         }
       li{
         font-size: 1.4rem;
         padding: 1.6rem 3rem 1.6rem 3rem;
@@ -193,7 +216,10 @@ nav.anchor-nav{
         position: relative;
         text-align: left;
         &:first-child{
-          padding: 1.6rem 3rem 1.6rem 0rem;
+          padding: 1.6rem 3rem 1.6rem 3rem;
+                   @media #{$breakpoint-md} {  
+                padding: 1.6rem 3rem 1.6rem 0rem;
+              }
 
         }
         &:last-child{
@@ -215,17 +241,4 @@ nav.anchor-nav{
       }
     }
   }
-
-  &.fixed-header{
-    &:hover{
-      
-
-    }
-
-
-
-
-  //subnav styling here
- 
-    }
 }

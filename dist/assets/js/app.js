@@ -24,46 +24,37 @@ var accessibility = {
 var introAnimation = {
   init: function() {
 
-  // 	var controller = new ScrollMagic.Controller();
+    // var controller = new ScrollMagic.Controller();
+    //  TweenMax.set("#box00 .landing-text h1", {scale:0, autoAlpha:1, ease: Linear.easeNone})
+    //  TweenMax.set("#box00 .landing-text h4", {scale:0, autoAlpha:0, ease: Linear.easeNone})
+ 
+   
+    //   var hero05 = new TimelineMax ({ })
+    //       hero05  
+    //       .to("#box00 .landing-text h1", 7,  {scale:1, autoAlpha:1, ease: Linear.easeNone})
+    //       .to("#box00 .landing-text h4", 7,  {scale:1, autoAlpha:1, ease: Linear.easeNone})
+
+    
 
  
-		// // LOAD VIDEO AND LOOP IT 
-		// var	intro = $("#intro"), 
-		// 	Content = $("#intro .content"),
-		// 	header = $(".header"),
-		// 	navigation = $("#navigation"),
-		// 	tiles = $("#navigation .tile");
-	 
-		// var introTl = new TimelineLite({paused: true})
 
-	 // 	TweenMax.set(tiles, {autoAlpha:0,x:-30, })
+    //   var scene05 = new ScrollMagic.Scene({
+    //     triggerElement: ".box00", 
+    //     triggerHook:0,
+    //     duration: '300%'
+    //   })
+    //  	.on("enter", function(){
+    //     //hero05.play(); 
+    //   })
 
-		//   introTl
-		// 	//.to(intro, 0.1, 	{className: '-=active'})  
-		// 	.to(Content, 0.4, 	{autoAlpha:1, ease: Cubic.easeOut})
-		// 	.staggerTo(tiles, 1.7, {x:0, autoAlpha:1, ease: Cubic.easeOut}, 0.4)
-		//   introTl.play();
-	 
+    //  // .setPin('.box00')
+    //   .setTween(hero05)
+    //   .addTo(controller); 
 
-
-		// var introBCG = new TimelineMax();
-
-		// introBCG 
-		// 	.to($('#intro .bcg'), 1.4, {y: '20%', scale:1.1, ease:Power1.easeOut}, '-=0.2') 
-
-		// var introScene = new ScrollMagic.Scene({
-		// 	triggerElement: '#intro', 
-		// 	triggerHook: 0,
-		// 	duration: "100%"
-		// })
-		// .setTween(introBCG)
-		// .addTo(controller);
-
- 
- 
-	 
-	}
+  }
 }
+
+ 
 
 var loader = {
 	init: function() {
@@ -129,9 +120,15 @@ var loader = {
 			.set($('body'), {className: '-=is-loading'})
 			.set($('body'), {className: '+=is-loaded'})
 			.to($('#preloader'), 0.7, {autoAlpha: 0, ease:Power4.easeInOut})
-			.set($('#preloader'), {className: '+=is-hidden'})
-			.fromTo($('#intro .content'), 1.5, {y: -20, autoAlpha: 1}, {y: 0, autoAlpha: 1, ease:Power1.easeOut}, '-=0.2') 
-			.fromTo($('#intro .bcg'), 1.5, {y:'0%', scale:1.05, autoAlpha: 0}, {y:'0', scale:1, autoAlpha: 1, ease:Power1.easeOut}, 1)
+			.set($('#preloader'), {className: '+=is-hidden'})	
+			.fromTo($('#intro h1'), 0.5, {autoAlpha: 0}, {autoAlpha: 1, ease:Power1.easeIn}, '-=0.2') 
+			.fromTo($('#intro h4'), 0.5, {y:-18, autoAlpha: 0}, {y:0, autoAlpha: 1, ease:Power1.easeIn}, '-=0') 
+			.to($('.header'), 0.5, {autoAlpha: 1, ease:Power1.easeOut})
+			.to($('.content-sections'), 0.5, {autoAlpha: 1, ease:Power1.easeOut}) 
+			.to($('#intro'), 0.5, {autoAlpha: 0, ease:Power1.easeOut}) 
+
+
+
  			return preloaderOutTl;
 		} 
 	}
@@ -140,23 +137,33 @@ var loader = {
 var navigation = {
 	init: function() {
 
-		var navigationHeight = $('#navigation').outerHeight();
+		// var navigationHeight = $('#navigation').outerHeight();
 
-		$(window).on("scroll touchmove", function () {
-			var fixHeaderHeight = $('#intro').outerHeight() - navigationHeight;
+		// $(window).on("scroll touchmove", function () {
+		// 	var fixHeaderHeight = $('#intro').outerHeight() - navigationHeight;
 
-			if ($(window).scrollTop() >= fixHeaderHeight) {
-		       $('#navigation').addClass('fixed-header');
-		    }
-		    else {
-		       $('#navigation').removeClass('fixed-header');
-		    }
-		});
+		// 	if ($(window).scrollTop() >= fixHeaderHeight) {
+		//        $('#navigation').addClass('fixed-header');
+		//     }
+		//     else {
+		//        $('#navigation').removeClass('fixed-header');
+		//     }
+		// });
  
    
 
 		// scrolling to top
 		$('.header .logo').on('click', function(e){
+		            var anchor = $(this);
+		        $('html, body').stop().animate({
+		          scrollTop: $(anchor.attr('href')).offset().top - 00
+		        }, 500);
+		    e.preventDefault();
+		    return false;
+		});
+
+		// arrow-down scroll icon 
+		$('.arrow-down, .progression-next').on('click', function(e){
 		            var anchor = $(this);
 		        $('html, body').stop().animate({
 		          scrollTop: $(anchor.attr('href')).offset().top - 00
@@ -177,12 +184,6 @@ var navigation = {
 
 
 
-	    $(".progression-next").click(function() {
-	    	console.log('hfeuwgifq')
-
-	    })
-
-
 	    
 	}
 }
@@ -196,11 +197,13 @@ var scrollMagic = {
 	}
 }
 
-var section04 = {
+      var section04 = {
   init: function() { 
 
 
     var controller = new ScrollMagic.Controller();
+
+
      TweenMax.set("#box04 .heading h1", {scale:0.8, autoAlpha:1, ease: Linear.easeNone})
      TweenMax.set("#box04 .side-left", {force3D:true, y: '90%',  ease: Linear.easeNone})
      TweenMax.set("#box04 .side-right", {force3D:true, y:' -90%',  ease: Linear.easeNone})
@@ -220,38 +223,27 @@ var section04 = {
 
       var scene05 = new ScrollMagic.Scene({
         triggerElement: ".box04", 
-        triggerHook:0,
+        triggerHook: 0,
         duration: '300%'
       })
-     	.on("enter", function(){
+      .on("enter", function(){
+        console.log('onEnter')
         //hero05.play(); 
       })
-
+      .on("leave", function(){
+        console.log('onLeave')
+        scene05 = scene05.destroy(true);
+        scene05 = null;
+      })
+      
       .setPin('.box04')
       .setTween(hero05)
       .addTo(controller);
 
-      var boxLink = $( '.but' );
-      var boxID = $(this).attr("data-target");
-      var targetBox = $('.box#' + boxID);
-
-
-      boxLink.click( function(e) {
-        e.preventDefault();
-
-        if ((targetBox).is('.box01')) { 
-          scene05 = scene05.destroy(true);
-        }
-        else if ((targetBox).is('.box02')) { 
-          scene05 = scene05.destroy(true);
-        }
-        else if ((targetBox).is('.box03')) { 
-          scene05 = scene05.destroy(true);
-        }
-
-      })
-
+ 
        
+ 
+     
 
   }
 }
@@ -265,38 +257,44 @@ var tabs = {
         var box = $( '.box' );
 
         boxLink.click( function() {
-        	$('#but1').removeClass('active');
         	$('html,body').animate({scrollTop: $("body").offset().top - 0}, 'slow');
 
             var boxID = $(this).attr("data-target");
             var currentbox = $('.box:not(.is-hidden)');
             var targetBox = $('.box#' + boxID);
 
-            if (!$(this).hasClass('active'))    {
+           // if (!$(this).hasClass('active'))    {
+                console.log('active')
                 boxLink.removeClass('active');
                 $(this).addClass('active');
 
                 TweenMax.to(currentbox, 0.2, {ease:Power4.easeOut, className: '-=visible', autoAlpha: 0,  onComplete: boxIn, onCompleteParams: [targetBox] });
-                
-            } 
-
+            //} 
+           
             return false;
         });
 
         var boxIn = function( targetBox ) {
             box.addClass( 'is-hidden' );
             targetBox.removeClass( 'is-hidden' );
- 
+
             TweenMax.to( targetBox, 0.2, {autoAlpha: 1,className: '+=visible', ease:Power4.easeIn});
 
                 if ((targetBox).is('.box04')) { 
-
                     section04.init(); 
                 }
 
+                if ((targetBox).is('.box02')) {
+                } else {
+                    $('.mobile .open').removeClass('open');
+                    $(".mobile header.header").removeClass('open');
+                    $(".mobile .anchor-nav").removeClass('open');
+                }
+               
+
                  
         }
- 
+
 
         //SECTION02 tabs for subnav
         ////////////////
@@ -305,8 +303,8 @@ var tabs = {
         var articleLink = $('.btnarticle');
         var article = $('.article');
 
+
         articleLink.click( function() {
-            $('#but1').removeClass('active');
             $('html,body').animate({scrollTop: $(".article-container").offset().top - 0}, 'slow');
 
             var boxID = $(this).attr("data-target");
@@ -328,6 +326,9 @@ var tabs = {
             targetArticle.removeClass( 'is-hidden' );
 
             TweenMax.to( targetArticle, 0.2, {autoAlpha: 1,className: '+=visible', ease:Power4.easeIn});
+            $('.mobile .open-button.open').removeClass('open'); 
+            $(".mobile header.header").removeClass('open');
+            $(".mobile .anchor-nav").removeClass('open');
         }
     }
  

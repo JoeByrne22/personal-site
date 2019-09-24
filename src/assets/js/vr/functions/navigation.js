@@ -1,23 +1,33 @@
 var navigation = {
 	init: function() {
 
-		var navigationHeight = $('#navigation').outerHeight();
+		// var navigationHeight = $('#navigation').outerHeight();
 
-		$(window).on("scroll touchmove", function () {
-			var fixHeaderHeight = $('#intro').outerHeight() - navigationHeight;
+		// $(window).on("scroll touchmove", function () {
+		// 	var fixHeaderHeight = $('#intro').outerHeight() - navigationHeight;
 
-			if ($(window).scrollTop() >= fixHeaderHeight) {
-		       $('#navigation').addClass('fixed-header');
-		    }
-		    else {
-		       $('#navigation').removeClass('fixed-header');
-		    }
-		});
+		// 	if ($(window).scrollTop() >= fixHeaderHeight) {
+		//        $('#navigation').addClass('fixed-header');
+		//     }
+		//     else {
+		//        $('#navigation').removeClass('fixed-header');
+		//     }
+		// });
  
    
 
 		// scrolling to top
 		$('.header .logo').on('click', function(e){
+		            var anchor = $(this);
+		        $('html, body').stop().animate({
+		          scrollTop: $(anchor.attr('href')).offset().top - 00
+		        }, 500);
+		    e.preventDefault();
+		    return false;
+		});
+
+		// arrow-down scroll icon 
+		$('.arrow-down, .progression-next').on('click', function(e){
 		            var anchor = $(this);
 		        $('html, body').stop().animate({
 		          scrollTop: $(anchor.attr('href')).offset().top - 00
@@ -36,12 +46,6 @@ var navigation = {
 	        $(".anchor-nav").toggleClass('open');
 	    });
 
-
-
-	    $(".progression-next").click(function() {
-	    	console.log('hfeuwgifq')
-
-	    })
 
 
 	    

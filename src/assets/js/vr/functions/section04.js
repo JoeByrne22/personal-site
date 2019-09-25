@@ -36,7 +36,7 @@
         scene05 = scene05.destroy(true);
         scene05 = null;
       })
-      
+      .setClassToggle('#box04', 'is-active')
       .setPin('.box04')
       .setTween(hero05)
       .addTo(controller);

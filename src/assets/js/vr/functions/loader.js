@@ -63,11 +63,13 @@ var loader = {
 			.set($('body'), {className: '+=is-loaded'})
 			.to($('#preloader'), 0.7, {autoAlpha: 0, ease:Power4.easeInOut})
 			.set($('#preloader'), {className: '+=is-hidden'})	
-			.fromTo($('#intro h1'), 0.5, {autoAlpha: 0}, {autoAlpha: 1, ease:Power1.easeIn}, '-=0.2') 
-			.fromTo($('#intro h4'), 0.5, {y:-18, autoAlpha: 0}, {y:0, autoAlpha: 1, ease:Power1.easeIn}, '-=0') 
+			.fromTo($('#intro h1'), 0.5, {scale:0.6, autoAlpha: 0}, {scale:0.8, autoAlpha: 1, ease:Power1.easeIn}, '-=0.2') 
+			.fromTo($('#intro h4'), 0.5, {scale:0.6, autoAlpha: 0}, {scale:0.8, autoAlpha: 1, ease:Power1.easeIn}, '-=5.5') 
+			.fromTo($('#intro .line-left'), 0.5, {autoAlpha: 0}, {autoAlpha: 1, ease:Power4.easeIn}) 
+			.fromTo($('#intro .line-right'), 0.5, {autoAlpha: 0}, {autoAlpha: 1, ease:Power4.easeIn}) 
 			.to($('.header'), 0.5, {autoAlpha: 1, ease:Power1.easeOut})
 			.to($('.content-sections'), 0.5, {autoAlpha: 1, ease:Power1.easeOut}) 
-			.to($('#intro'), 0.5, {autoAlpha: 0, ease:Power1.easeOut}) 
+			.to($('#intro'), 2, {autoAlpha: 0, ease:Power1.easeOut}) 
 
 
 

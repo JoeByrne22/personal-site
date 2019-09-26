@@ -4,7 +4,7 @@ header.header{
 	justify-content: center;
 	position: absolute;
 	top:0;
-	z-index: 6;
+	z-index: 12;
   transition: background 500ms ease 0s;
 	.wrap-header{
 		width: 100%; 
@@ -34,7 +34,7 @@ header.header{
 
       &.logo.client{
         background-image: url('../img/logo/core-hr.svg');
-        width: 177px;
+        width: 134px;
         height: 64px;
         object-fit: contain;
         color: black;

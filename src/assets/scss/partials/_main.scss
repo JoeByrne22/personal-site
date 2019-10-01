@@ -61,7 +61,7 @@
     position: relative;
     overflow:hidden;
     z-index: 3;
-    padding: 0rem 1.6rem 0rem 1.6rem;
+    padding: 0rem 2.7rem 0rem 2.2rem;
     @media #{$breakpoint-md} {
       padding: 6rem 11.4rem 2.8rem 11.4rem;
     }
@@ -69,37 +69,66 @@
       position: relative;
       display: flex;
       align-items: center;
-      height: 100%;
+      height: auto;
+      @media #{$breakpoint-md} {
+        height: 100%;
+      }
     }
 }
 
 
 #box01{
 .hero-content{
-      padding: 4rem 0 16rem 0;
+      padding: 2.5rem 0 0rem 0;
         @media #{$breakpoint-md} {
              padding:15rem 0 11rem 0; 
         }
   }
   .intro01{
     position: relative;
+    margin-top: 67px;
+    background-color: $white;
+    @media #{$breakpoint-md} {
+      background-color: $black;
+      margin: 0;
+      height:100vh;
+    }
       .bcg{
-        background-image: url('../img/src/segment-1-technology01.jpg');
-
+        background-image: url('../img/src/h-eader-photo-1-mobile.jpg');
+        @media #{$breakpoint-md} {
+          background-image: url('../img/src/segment-1-technology01.jpg');
+        }
+ 
+      }
+      h1 {
+        color: $black;
+          @media #{$breakpoint-md} {
+            color: $white;
+          }
       }
   }
   .intro02{
+    .hero-content{
+      padding: 0rem 0 0rem 0;
+        @media #{$breakpoint-md} {
+             padding:15rem 0 11rem 0; 
+        }
+  }
     position: relative;
     background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+      @media #{$breakpoint-md} {
+          }
 
     .bcg {
-      background-image: url('../img/src/segment-1-technology02.jpg');
-      background-size: contain;
-      top: 67%;
-          @media #{$breakpoint-md} {
-              background-size: cover;
-              top:0;            
-          }
+      background-image: url('../img/src/segment-1-technology02-mobile.jpg');
+      background-size: auto;
+        @media #{$breakpoint-md} {
+          background-image: url('../img/src/segment-1-technology02.jpg');
+          background-size: cover;
+        }
 
     }
   }
@@ -110,19 +139,29 @@
     h3 {
       color: $white;
       font-family: $font-family-bold;
-      font-size: 35px;
-      margin: 0 0 9.2rem 0;
+      font-size: 20px;
+      margin: 0 0 4.2rem 0;
+        @media #{$breakpoint-md} {
+            font-size: 35px;
+            margin: 0 0 9.2rem 0;
+        }
     }
     p {
       color: $white;
 
     }
     header {      
-      padding-top: 15px;
-                @media #{$breakpoint-md} {
-                        padding-top: 0px;
-                }
+      padding-top: 42px;
+        @media #{$breakpoint-md} {
+          padding-top: 0px;
+        }
     }
+    .item div {
+      padding: 0;
+        @media #{$breakpoint-md} {
+          padding: 4rem;
+        }
+      }
   }
 
   .intro04{
@@ -133,7 +172,10 @@
 
 #box02{
 .hero-content{
-  padding:15rem 0 11rem 0;
+  padding:2.4rem 2.3rem 0 2.2rem;
+    @media #{$breakpoint-md} {
+      padding: 15rem 0 11rem 0;           
+    }
 }
 
 
@@ -141,15 +183,19 @@
 
 
 
-      .article01-1{ 
-        position: relative;
+      .article01-1{
+          position: relative;
+          margin-top: 67px;
+          background-color: $white;
+          @media #{$breakpoint-md} {
+            background-color: $black;
+            margin: 0;
+            height:100vh;
+          }
           .bcg{
-            background-image: url('../img/src/segment-2-seize-the-moment01.png');
-            left: -50%;
-            width: 150%;
+            background-image: url('../img/src/segment-2-seize-the-moment01-mobile.jpg');
             @media #{$breakpoint-md} { 
-              left: 0;
-              width: 100%;
+              background-image: url('../img/src/segment-2-seize-the-moment01.png');
             }
           }
       }
@@ -566,266 +612,196 @@
             visibility: hidden;
             opacity: 0;
         }
-          }
-  .hero-content{
-    padding:15rem 0 11rem 0;
-  }
-    .article05-1{
-      position: relative;
-        .bcg{
-          background-image: url('../img/src/segment-5-checklist01.png');
-          top:0;
-          background-position: left;
-                @media #{$breakpoint-md} {
-
-              background-position: top center;
-                }
-        }
     }
-
-    .article05-2{
-      .header-container{
-          background-color: black;
-          padding: 0rem 11.4rem 2.8rem 11.4rem;
-        }
-        header {
+  .hero-content{
+    padding:2.4rem 0 2.4rem 0;
+          @media #{$breakpoint-md} {
+              padding:15rem 0 11rem 0;         
+          }
+  }
+  .flex-container{
+          margin-left: 0px;
           h3{
-          color: $white;
-
-          }
-        }
-        h3 {
-          color: $black;
-          font-family: $font-family-bold;
-          margin: 0 0 9.2rem 0;
-            &.section-3-title {
-                margin: 10rem 0 0rem 0;
-              }
-          // line-height: 0px;
+            margin-bottom: 4rem;
+            color: $white;
             @media #{$breakpoint-md} {
-              line-height: 48px;
+              color: $black;
             }
-        }
-        p {
-          color: $black;
-
-        }
-
-        .item01{
-          background-color:#f5f5f5;
-          display: flex;
-          flex-direction: column;
-                  @media #{$breakpoint-md} {
-                     flex-direction: row;
-                  }
-          .flex-container{
-              margin-left: 0px;
-              @media #{$breakpoint-md} {
-                    margin: 4rem 4rem 4rem 10rem;
-              }
-
           }
-          .bcg{
-            background-image: url('../img/src/segment-5-checklist02.png');
-            position: relative;
-            height:345px;
+          p{
+            padding-top: 3rem;
+            color: $white;
+            line-height: 16px;
+
+            @media #{$breakpoint-md} {
+              color: $black;
+            }
+          }
+
+          @media #{$breakpoint-md} {
+                margin: 4rem 4rem 4rem 10rem;
+          }
+
+      }
+
+
+  .item01{
+      display: flex;
+      flex-direction: column-reverse;
+      background-color:$black;
+          @media #{$breakpoint-md} {
+            flex-direction: row;
+            background-color:#f5f5f5;
+            }
+      .bcg{
+          position: relative;
+          height:271px;
             @media #{$breakpoint-md} {
               height: 100%;
-            }
-
-          }
-          .tickbox{
-            left:94px;
           }
         }
+  }
+
+  .header-container{
+    padding: 0rem 2.3rem 0rem 2.2rem;
+      @media #{$breakpoint-md} {
+        padding: 0rem 11.4rem 2.8rem 11.4rem;
       }
+    }
+
+
+
+
+    .article05-1{
+      position: relative;
+      height: auto;
+      margin-top: 67px;
+      background-color: $white;
+        @media #{$breakpoint-md} {
+           height: 100vh;
+           margin-top: 0;
+        }
+
+          .bcg {
+        background-image: url('../img/src/segment-5-checklist01-mobile.jpg');
+        background-size: auto;
+              height: 232px;
+      @media #{$breakpoint-md} {
+            background-image: url('../img/src/segment-5-checklist01.png');
+            background-size: cover;
+                       height: 100vh;
+
+
+        }
+    }
+      
+      h1 {
+          color: $black; 
+         @media #{$breakpoint-md} {
+        color: $white;
+         }         
+        }
+      
+  }
+
+    .article05-2{
+        h3 {
+         
+            &.section-3-title {
+                height: 127px;
+                color: $white;
+                margin: 3.1rem 0 0 0;
+                text-align: left;
+                font-size: 2.5rem;
+                line-height: 3.5rem;
+                    @media #{$breakpoint-md} {
+                      height: auto;
+                      margin: 10rem 0 0 0;
+                      text-align: center;
+                      font-size: 4rem;
+                  }
+              } 
+        }
+
+          
+          .bcg{
+            background-image: url('../img/src/segment-5-checklist02-mobile.jpg');
+            @media #{$breakpoint-md} {
+              background-image: url('../img/src/segment-5-checklist02.png');
+            }
+          }
+        }
 
       .article05-3{
-        .header-container{
-            background-color: black;
-            padding: 0rem 11.4rem 2.8rem 11.4rem;
-          }
-          h3 {
-            color: $black;
-            font-family: $font-family-bold;
-            margin: 0 0 9.2rem 0;            
-                @media #{$breakpoint-md} {
-              line-height: 48px;
+          .item01{
+              display: flex;
+              flex-direction: column;
+                  @media #{$breakpoint-md} {
+                    flex-direction: row;
+                  }
+                }
+          
+          .bcg{
+            background-image: url('../img/src/segment-5-checklist03-mobile.jpg');
+            @media #{$breakpoint-md} {
+              background-image: url('../img/src/segment-5-checklist03.png');
             }
           }
-          p {
-            color: $black;
-
-          }
-
-          .item01{
-          background-color:#f5f5f5;
-          display: flex;
-          flex-direction: column;
-                  @media #{$breakpoint-md} {
-                     flex-direction: row;
-                  }
-          .flex-container{
-              margin-left: 0px;
-              @media #{$breakpoint-md} {
-                    margin: 4rem 4rem 4rem 10rem;
-              }
-
-          }
-          .bcg{
-            background-image: url('../img/src/segment-5-checklist03.png');
-            position: relative;
-            height:345px;
-              @media #{$breakpoint-md} {
-                height: 100%;
-              }
-          }
-          .tickbox{
-              left: -43px;
-              top: 2px;
-          }
         }
-      }
+      
 
       .article05-4{
-      .header-container{
-          background-color: black;
-          padding: 0rem 11.4rem 2.8rem 11.4rem;
-        }
-        h3 {
-          color: $black;
-          font-family: $font-family-bold;
-          margin: 0 0 9.2rem 0;
-          @media #{$breakpoint-md} {
-              line-height: 48px;
+          .bcg{
+            background-image: url('../img/src/segment-5-checklist04-mobile.jpg');
+            position: relative;
+            background-position: right;
+                @media #{$breakpoint-md} {
+                  background-image: url('../img/src/segment-5-checklist04.png');
             }
+          }
         }
-        p {
-          color: $black;
-
-        }
-
-        .item01{
-          background-color:#f5f5f5;
+      
+      .article05-5{
+          .item01{
           display: flex;
           flex-direction: column;
                   @media #{$breakpoint-md} {
-                     flex-direction: row;
+                    flex-direction: row;
                   }
-            .flex-container{
-              margin-left: 0px;
-              @media #{$breakpoint-md} {
-                    margin: 4rem 4rem 4rem 10rem;
-              }
-          }
-          .bcg{
-            background-image: url('../img/src/segment-5-checklist04.png');
-            position: relative;
-            background-position: right;
-            height:345px;
-              @media #{$breakpoint-md} {
-                height: 100%;
-              }
-          }
-          .tickbox{
-            left:94px;
-          }
-        }
-      }
-      .article05-5{
-      .header-container{
-          background-color: black;
-          padding: 0rem 11.4rem 2.8rem 11.4rem;
-        }
-        h3 {
-          color: $black;
-          font-family: $font-family-bold;
-          margin: 0 0 9.2rem 0;
-          @media #{$breakpoint-md} {
-              line-height: 48px;
-            }
-        }
-        p {
-          color: $black;
-
-        }
-
-        .item01{
-          background-color:#f5f5f5;
-          flex-direction: column;
-              @media #{$breakpoint-md} {
-                  flex-direction: row;
                 }
-        .flex-container{
-            margin-left: 0px;
-              @media #{$breakpoint-md} {
-                    margin: 4rem 4rem 4rem 10rem;
-              }
-          }
+         
           .bcg{
-            background-image: url('../img/src/segment-5-checklist05.png');
+            background-image: url('../img/src/segment-5-checklist05-mobile.jpg');
             position: relative;
             background-position: left;
-            height:345px;
-              @media #{$breakpoint-md} {
-                height: 100%;
-              }
+                @media #{$breakpoint-md} {
+              background-image: url('../img/src/segment-5-checklist05.png');
+            }
           }
-          .tickbox{
-              left: -43px;
-              top: 2px;
-            }
         }
-      }
+      
       .article05-6{
-      .header-container{
-          background-color: black;
-          padding: 0rem 11.4rem 2.8rem 11.4rem;
-        }
-        h3 {
-          color: $black;
-          font-family: $font-family-bold;
-          margin: 0 0 9.2rem 0;
-          @media #{$breakpoint-md} {
-              line-height: 48px;
-            }
-        }
-        p {
-          color: $black;
-
-        }
-
-        .item01{
-          background-color:#f5f5f5;
-          flex-direction: column;
-              @media #{$breakpoint-md} {
-                flex-direction: row;
-              }
-        .flex-container{
-            margin-left: 0px;
-              @media #{$breakpoint-md} {
-                margin: 4rem 4rem 4rem 10rem;
-              }
-            }
           .bcg{
-            background-image: url('../img/src/segment-5-checklist06.png');
+            background-image: url('../img/src/segment-5-checklist06-mobile.jpg');
             position: relative;
             background-position: right;
-            height:345px;
-              @media #{$breakpoint-md} {
-                height: 100%;
-              }
-          }
-          .tickbox{
-            left:94px;
-          }
+                @media #{$breakpoint-md} {
+              background-image: url('../img/src/segment-5-checklist06.png');
+            }
+          } 
         }      
       }
-}
+      
 
 #box04{
   .container{
-    height: calc(100vh - 98px);
+    visibility: hidden;
+    opacity: 0;
+          @media #{$breakpoint-md} {
+            height: calc(100vh - 98px);
+            visibility: visible;
+            opacity: 1;
+      }
     .wrapper{ 
       width: 100%;
       height: 100%; 
@@ -885,71 +861,75 @@
       height: auto;
     }
   }
-    .parallax-wrapper{  
-      position: relative;
-      width: 50%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      &.side-left{
-        display: flex;
-        align-items: flex-end;
-        flex-wrap: wrap;
-        //transform: translateY(90%);
-        .bcg{
-          width: 150px;
-          height: 150px;
-          position: relative;
-          margin: .6rem .6rem .6rem 0;
-            @media #{$breakpoint-md} {
-              margin: .6rem .75rem .6rem 0;
-              width: 438px;
-              height: 438px;
-            }
-        }
-        .parallax01{
-          background-image: url('../img/src/segment-6-contact01-left.jpg');
-        }
-        .parallax02{
-          background-image: url('../img/src/segment-6-contact02-left.jpg');
-        }
-        .parallax03{
-          background-image: url('../img/src/segment-6-contact03-left.jpg');
-        }
-      }
-      &.side-right{
-        display: flex;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        //transform: translateY(-90%);
-        .bcg{
-          width: 150px;
-          height: 150px;
-          position: relative;
-          margin:.6rem .6rem .6rem 0;
-            @media #{$breakpoint-md} {
-              margin: .6rem .6rem .6rem .3rem;
-              width: 438px;
-              height: 438px;
-            }
-        }
-        .parallax01{
-          background-image: url('../img/src/segment-6-contact01.jpg');
-        }
-        .parallax02{
-          background-image: url('../img/src/segment-6-contact02.jpg');
-        }
-        .parallax03{
-          background-image: url('../img/src/segment-6-contact03.jpg');
-        }
-      }
-
-        
+  .dynamic{
+    display: none;
+    @media #{$breakpoint-md} {
+      display: block;
     }
+  }
+  .parallax-wrapper{  
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &.side-left{
+      display: flex;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      //transform: translateY(90%);
+      .bcg{
+        width: 150px;
+        height: 150px;
+        position: relative;
+        margin: .6rem .6rem .6rem 0;
+          @media #{$breakpoint-md} {
+            margin: .6rem .75rem .6rem 0;
+            width: 438px;
+            height: 438px;
+          }
+      }
+      .parallax01{
+        background-image: url('../img/src/segment-6-contact01-left.jpg');
+      }
+      .parallax02{
+        background-image: url('../img/src/segment-6-contact02-left.jpg');
+      }
+      .parallax03{
+        background-image: url('../img/src/segment-6-contact03-left.jpg');
+      }
+    }
+    &.side-right{
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      //transform: translateY(-90%);
+      .bcg{
+        width: 150px;
+        height: 150px;
+        position: relative;
+        margin:.6rem .6rem .6rem 0;
+          @media #{$breakpoint-md} {
+            margin: .6rem .6rem .6rem .3rem;
+            width: 438px;
+            height: 438px;
+          }
+      }
+      .parallax01{
+        background-image: url('../img/src/segment-6-contact01.jpg');
+      }
+      .parallax02{
+        background-image: url('../img/src/segment-6-contact02.jpg');
+      }
+      .parallax03{
+        background-image: url('../img/src/segment-6-contact03.jpg');
+      }
+    } 
+  }
 
     .contact-container { 
-      position: absolute; 
+      position: relative; 
       width: 100%;
       height: 100%;
       top: 0;
@@ -958,47 +938,88 @@
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
+      visibility: visible;
+      opacity: 1;
+      @media #{$breakpoint-md} {
+        position: absolute; 
+        visibility: hidden;
+        opacity: 0;
+      }
+      .bcg {
+          margin-top: 64px;
+          background-image: url('../img/src/segment-6-contact04-mobile.jpg');
+          visibility: visible;
+          opacity: 1;
+          @media #{$breakpoint-md} {
+            visibility: hidden;
+            opacity: 0;
+          }
+      }
+
       .header-container {
-        padding:0 0 0 0;
+        padding:2rem 2.3rem 2rem 2.2rem;
         height: auto;
+            @media #{$breakpoint-md} {
+               padding:0 0 0 0;
+            }
+        h1 {
+            color: $white;
+            visibility: visible;
+            opacity: 1;
+            @media #{$breakpoint-md} {
+              visibility: hidden;
+              opacity: 0;
+              height: 0
+          }
+        }
       }
       .contact-top {
-        text-align: center;
-        height: 55vh;
         background-color: black;
         color: #ffffff;
         display: flex;
         align-items: center;
-        justify-content: center;
-        width: 55%;
-        margin: auto;
-        margin-top: 85px;
+        width: 100%;
+        justify-content: left;
+        margin: 0;
+        height: 97px;
+            @media #{$breakpoint-md} {
+              text-align: center;
+              height: 55vh;
+              margin: auto;
+              margin-top: 85px;
+              justify-content: center;
+              width: 55%;
+          }
           h4{
             align-items: center;
           }
       }
       .contact-bottom {
         width: 100%;
-        height: 40vh;
+        height: 179px;
         background-image: linear-gradient(to left, #00aea9, #0e99f0);
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-
+          @media #{$breakpoint-md} {
+            height: 40vh;
+          }
         .profile-wrapper{
           display: flex;
           flex-wrap: wrap;
           justify-content: center;
           .profile-image { 
             background-image: url('../img/src/PeterDurrant.jpeg');
-            height: 133px;
-            width: 129px;
             margin: 0.5rem 2rem 0 0;
             display: block;
             background-size: cover;
             display: block;
+            height: 100px;
+            width: 100px;
                 @media #{$breakpoint-md} {
+                  height: 133px;
+                  width: 129px;
                   margin:0 2rem 0 0;
                 }
           }
@@ -1013,26 +1034,34 @@
               }
             }
             .profile-info-p {
-                  width: 100%;
-            @media #{$breakpoint-md} {
-                  width: 57%;
-                }
+              width: 100%;
+              margin-top: -1rem;
+              @media #{$breakpoint-md} {
+                    margin-top:0;
+                    width: 57%;
+                  }
             }
           }
         }
       } 
     }
-}
+  }
+
 
 .linkedin-icon {
   background-image: url('../img/src/linkedin-icon.svg');
-  width: 38px;
-  height: 33px; 
+  width: 28px;
+  height: 24px;
+  background-size: contain;
+    @media #{$breakpoint-md} {
+      width: 38px;
+      height: 33px;        
+    }
 }
 
-.item01{
-  margin-top: 10rem;
-}
+// .item01{
+//   margin-top: 10rem;
+// }
 
 
        

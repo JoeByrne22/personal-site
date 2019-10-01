@@ -44,10 +44,20 @@ br{
     display: inline-block;
     position: absolute;
     bottom: 14px;
+    visibility: hidden;
+    opacity: 0;
     left: 45%;
-      @media #{$breakpoint-md} {
-          left: 50%;
-      }
+    @media #{$breakpoint-md} {
+        left: 50%;
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+h3{
+  .tickbox{
+
+  }
 }
 
 
@@ -78,6 +88,23 @@ br{
 .gradient{
   background-image: linear-gradient(to left, #4998c5, #71bbbb);
 }
+.bcg{
+  
+  top: 0px;
+  left: 0px;
+  width: 100%; 
+  position: relative; 
+  height: 232px;  
+  background-position: top center;
+  background-repeat:no-repeat;
+  background-size: contain;
+  @media #{$breakpoint-md} {
+    position: absolute;
+    height: 100%;
+    background-size: cover;
+  }
+}
+
 video.video{
   position: absolute;
   right: 0;
@@ -115,18 +142,15 @@ h3{
 
 
 .tickbox {
-    background-image: url('../img/src/tickbox.png');
-    height: 34px;
-    width: 39px;
+    background-image: url('../img/src/tickbox.svg');
+    height: 25px;
+    width: 25px;
     background-repeat: no-repeat;
     position: absolute;
     left: 40px;
-    visibility: hidden;
-    opacity: 0;
-      @media #{$breakpoint-md} {
-        visibility: visible;
-        opacity: 1;
-      }
+    top: 0;
+    left: -43px;
+    background-size: contain;
 }
 
 #progression-bar {
@@ -291,5 +315,11 @@ h3{
     visibility:hidden;
   }
 }
+
+
  
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
 

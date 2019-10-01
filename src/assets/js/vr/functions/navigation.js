@@ -35,17 +35,44 @@ var navigation = {
 		    e.preventDefault();
 		    return false;
 		});
- 
-
 
 		/* Menu fade/in out on mobile */
-	    $(".open-button").click(function(e){
+	    $(".mobile  .open-button").click(function(e){
+
 	        e.preventDefault();
 	        $(this).toggleClass('open');
 	        $("header.header").toggleClass('open');
 	        $(".anchor-nav").toggleClass('open');
+	        if ($('.tile').hasClass('active')) {
+	        	$('.tile').removeClass('active')
+	        	$('.tile').removeClass('open')
+	        	$('.tile').removeClass('hidden')
+	        }
+
 	    });
 
+
+
+		$('.mobile .hassubnav').on('click', function(e){
+		   //      if (!$('.hassubnav').hasClass('active')) {
+		   //      	console.log('add active')
+					// $('.hassubnav').addClass('active');        	
+		   //      } else if ($('.hassubnav').hasClass('active')) {
+					// console.log('remove actcewoh')
+					// $('.hassubnav').removeClass('active');        	
+
+		   //      } 
+
+
+			console.log('fgyiewgbjks')
+
+			// $(this).addClass('active');
+			$('.hassubnav').toggleClass('open');
+			$('.hassubnav').addClass('active');
+			$('.tile').toggleClass('hidden');
+			$('.hassubnav').removeClass('hidden');
+
+		});		
 
 
 	    

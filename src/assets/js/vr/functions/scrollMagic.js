@@ -3,7 +3,7 @@ var scrollMagic = {
 	
 	var controller = new ScrollMagic.Controller();
 
-	$(".fade").each(function(){
+	$(".desktop .fade").each(function(){
 	    $(this).addClass('out');
 	    new ScrollMagic.Scene({
 	      triggerElement: this,

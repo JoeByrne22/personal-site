@@ -64,7 +64,7 @@ var tabs = {
 
             if (!$(this).hasClass('active'))    {
                 articleLink.removeClass('active');
-                $(this).addClass('active');
+                $(this).addClass('active') ;
 
                 TweenMax.to(currentarticle, 0.2, {ease:Power4.easeOut,className: '-=visible', autoAlpha: 0,  onComplete: articleIn, onCompleteParams: [targetArticle] });
             } 

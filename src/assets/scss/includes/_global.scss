@@ -132,11 +132,14 @@ video.video{
 h3{
   .line{
     position: absolute;
-    width:70px;
     height:2px;
     background-color: $blue;
+    width: 57.6px;
     left:0;
     bottom:-2rem;
+      @media #{$breakpoint-md} {
+        width:70px;
+    }
   }
 }
 

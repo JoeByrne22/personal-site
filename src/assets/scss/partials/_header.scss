@@ -86,7 +86,7 @@ header.header{
     border-bottom: 0;
     top: 1.9rem;
     right: 2rem;
-    z-index: 6;
+    z-index: 0;
     border-bottom: 0;
     position: fixed;
     @media #{$breakpoint-md} {
@@ -103,10 +103,10 @@ header.header{
     position: absolute;
     height: 6.8rem;
     background-color: #ffffff;
-    left: 20px;
+    left: -86.8vw;
     top: -20px;
     z-index: 0;
-    width: 100%;
+    width: 100vw;
   }
 }
 

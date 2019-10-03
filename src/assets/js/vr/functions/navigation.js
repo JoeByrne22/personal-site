@@ -43,10 +43,9 @@ var navigation = {
 	        $(this).toggleClass('open');
 	        $("header.header").toggleClass('open');
 	        $(".anchor-nav").toggleClass('open');
-	        if ($('.tile').hasClass('active')) {
+	        if ($('.tile.hassubnav').hasClass('active')) {
 	        	$('.tile').removeClass('active')
-	        	$('.tile').removeClass('open')
-	        	$('.tile').removeClass('hidden')
+	        	$('.tile').removeClass('open') 
 	        	$('.hassubnav').removeClass('mobile-nav')
 	        }
 
@@ -60,7 +59,7 @@ var navigation = {
             box.addClass( 'is-hidden' );
             targetBox.removeClass( 'is-hidden' );
 
-            TweenMax.to( targetBox, 0.2, {autoAlpha: 1,className: '+=visible', ease:Power4.easeIn});
+            //TweenMax.to( targetBox, 0.2, {autoAlpha: 1,className: '+=visible', ease:Power4.easeIn});
 
             if ((targetBox).is('.box04')) { 
                 section04.init(); 
@@ -74,17 +73,14 @@ var navigation = {
             }
         }
 
-            var box = $( '.box' );
-
+            var box = $( '.box' ); 
          	var boxID = $(this).attr("data-target");
          
-              var currentbox = $('.box:not(.is-hidden)');
-               var targetBox = $('.box#' + boxID);
-              $(this).toggleClass('active');
-              $(this).toggleClass('mobile-nav');
-              //$('.tile').toggleClass('hidden');
-              //$('.hassubnav').toggleClass('hidden');
-              TweenMax.to(currentbox, 0.2, {ease:Power4.easeOut, className: '-=visible', autoAlpha: 0,  onComplete: boxIn, onCompleteParams: [targetBox] });
+          var currentbox = $('.box:not(.is-hidden)');
+           var targetBox = $('.box#' + boxID);
+          $(this).toggleClass('active');
+          $(this).toggleClass('mobile-nav'); 
+          TweenMax.to(currentbox, 0.2, {ease:Power4.easeOut, className: '-=visible', autoAlpha: 0,  onComplete: boxIn, onCompleteParams: [targetBox] });
 
 
         });     	    

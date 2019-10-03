@@ -55,34 +55,33 @@
 /* =Header */
 .header-container {
   height: 100%;
-    width: 100%;
-    max-width: 144.0rem;
-    margin:auto; 
+  width: 100%;
+  max-width: 144.0rem;
+  margin:auto; 
+  position: relative;
+  overflow:hidden;
+  z-index: 3;
+  padding: 0rem 2.7rem 0rem 2.2rem;
+  @media #{$breakpoint-md} {
+    padding: 6rem 11.4rem 2.8rem 11.4rem;
+  }
+  .wrapper {
     position: relative;
-    overflow:hidden;
-    z-index: 3;
-    padding: 0rem 2.7rem 0rem 2.2rem;
+    display: flex;
+    align-items: center;
+    height: 100%;
     @media #{$breakpoint-md} {
-      padding: 6rem 11.4rem 2.8rem 11.4rem;
+      height: 100%;
     }
-    .wrapper {
-      position: relative;
-      display: flex;
-      align-items: center;
-      height: auto;
-      @media #{$breakpoint-md} {
-        height: 100%;
-      }
-    }
+  }
 }
-
 
 #box01{
 .hero-content{
-      padding: 2.5rem 0 0rem 0;
-        @media #{$breakpoint-md} {
-             padding:15rem 0 11rem 0; 
-        }
+  padding: 2.5rem 0 0rem 0;
+    @media #{$breakpoint-md} {
+         padding:15rem 0 11rem 0; 
+    }
   }
   .intro01{
     position: relative;

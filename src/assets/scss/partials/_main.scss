@@ -124,7 +124,7 @@
 
     .bcg {
       background-image: url('../img/src/segment-1-technology02-mobile.jpg');
-      background-size: auto;
+      // background-size: auto;
         @media #{$breakpoint-md} {
           background-image: url('../img/src/segment-1-technology02.jpg');
           background-size: cover;
@@ -711,7 +711,7 @@
 
           .bcg {
         background-image: url('../img/src/segment-5-checklist01-mobile.jpg');
-        background-size: auto;
+        // background-size: auto;
               height: 232px;
       @media #{$breakpoint-md} {
             background-image: url('../img/src/segment-5-checklist01.png');

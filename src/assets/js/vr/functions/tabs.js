@@ -7,6 +7,7 @@ var tabs = {
         var boxLink = $( '.but' );
         var box = $( '.box' );
 
+
         boxLink.click( function() {
         	$('html,body').animate({scrollTop: $("body").offset().top - 0}, 'slow');
 
@@ -16,7 +17,7 @@ var tabs = {
 
              
 
-           if (!$(this).hasClass('active'))    {
+           if (!$(this).hasClass('active') && !$('html').hasClass('mobile') )    {
                 
                 boxLink.removeClass('active');
                 $(this).addClass('active');
@@ -82,7 +83,8 @@ var tabs = {
             $(".mobile .anchor-nav").removeClass('open');
         }
     }
- 
 
 }
  
+
+

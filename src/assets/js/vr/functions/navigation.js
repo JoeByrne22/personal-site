@@ -47,35 +47,47 @@ var navigation = {
 	        	$('.tile').removeClass('active')
 	        	$('.tile').removeClass('open')
 	        	$('.tile').removeClass('hidden')
+	        	$('.hassubnav').removeClass('mobile-nav')
 	        }
 
 	    });
 
 
+         
+         $('.mobile li.but').on('click', function( ){
 
-		$('.mobile .hassubnav').on('click', function(e){
-		   //      if (!$('.hassubnav').hasClass('active')) {
-		   //      	console.log('add active')
-					// $('.hassubnav').addClass('active');        	
-		   //      } else if ($('.hassubnav').hasClass('active')) {
-					// console.log('remove actcewoh')
-					// $('.hassubnav').removeClass('active');        	
+         	var boxIn = function( targetBox ) {
+            box.addClass( 'is-hidden' );
+            targetBox.removeClass( 'is-hidden' );
 
-		   //      } 
+            TweenMax.to( targetBox, 0.2, {autoAlpha: 1,className: '+=visible', ease:Power4.easeIn});
+
+            if ((targetBox).is('.box04')) { 
+                section04.init(); 
+            }
+
+            if ((targetBox).is('.box02')) {
+            } else {
+                $('.mobile .open').removeClass('open');
+                $(".mobile header.header").removeClass('open');
+                $(".mobile .anchor-nav").removeClass('open');
+            }
+        }
+
+            var box = $( '.box' );
+
+         	var boxID = $(this).attr("data-target");
+         
+              var currentbox = $('.box:not(.is-hidden)');
+               var targetBox = $('.box#' + boxID);
+              $(this).toggleClass('active');
+              $(this).toggleClass('mobile-nav');
+              //$('.tile').toggleClass('hidden');
+              //$('.hassubnav').toggleClass('hidden');
+              TweenMax.to(currentbox, 0.2, {ease:Power4.easeOut, className: '-=visible', autoAlpha: 0,  onComplete: boxIn, onCompleteParams: [targetBox] });
 
 
-			console.log('fgyiewgbjks')
-
-			// $(this).addClass('active');
-			$('.hassubnav').toggleClass('open');
-			$('.hassubnav').addClass('active');
-			$('.tile').toggleClass('hidden');
-			$('.hassubnav').removeClass('hidden');
-
-		});		
-
-
-	    
+        });     	    
 	}
 }
 

@@ -3,6 +3,14 @@
   visibility: hidden
 }
 
+.landing-subheader {
+  width: 70%;
+  margin: auto;
+   @media #{$breakpoint-md} {
+     width: 100%;
+   } 
+}
+
 .is-loaded {
     .bcg {
       visibility:visible;
@@ -90,7 +98,7 @@
 
 #box01{
 .hero-content{
-  padding: 2.5rem 0 0rem 0;
+  padding: 1.2rem 0 0rem 0;
     @media #{$breakpoint-md} {
          padding:15rem 0 11rem 0; 
     }
@@ -671,7 +679,6 @@
             }
           }
           p{
-            padding-top: 3rem;
             color: $white;
             // line-height: 16px;
 
@@ -739,26 +746,20 @@
       
       h1 {
           color: $black; 
-         @media #{$breakpoint-md} {
-        color: $white;
-         }         
+          margin-top: 1.2rem;
+           @media #{$breakpoint-md} {
+          color: $white;
+           }         
         }
       
   }
 
     .article05-2{
-      // .wrapper {
-      //   justify-content: center;
-      //     @media #{$breakpoint-md} {
-      //       justify-content: auto
-      //     }
-      // }
         h3 {
          
             &.section-3-title {
-                height: 127px;
                 color: $white;
-                margin: 3.1rem 0 0 0;
+                margin: 2.5rem 0 2.5rem 0;
                 text-align: left;
                 font-size: 2.5rem;
                 line-height: 3.5rem;

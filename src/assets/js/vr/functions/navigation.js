@@ -7,7 +7,7 @@ var navigation = {
 		$('.header .logo').on('click', function(e){
 		            var anchor = $(this);
 		        $('html, body').stop().animate({
-		          scrollTop: $(anchor.attr('href')).offset().top - 00
+		          // scrollTop: $(anchor.attr('href')).offset().top - 00
 		        }, 500);
 		    e.preventDefault();
 		    return false;
@@ -17,7 +17,7 @@ var navigation = {
 		$('.arrow-down, .progression-next').on('click', function(e){
 		            var anchor = $(this);
 		        $('html, body').stop().animate({
-		          scrollTop: $(anchor.attr('href')).offset().top - 00
+		          // scrollTop: $(anchor.attr('href')).offset().top - 00
 		        }, 500);
 		    e.preventDefault();
 		    return false;

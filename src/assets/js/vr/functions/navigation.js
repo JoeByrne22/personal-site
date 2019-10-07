@@ -32,7 +32,6 @@ var navigation = {
 	        $(".anchor-nav").toggleClass('open');
 
 	        if ($('.tile.hassubnav').hasClass('active')) {
-	        	//$('.tile').removeClass('active')
 	        	$('.tile').removeClass('open') 
 	        	$('.hassubnav').removeClass('mobile-nav')
 	        }
@@ -40,41 +39,40 @@ var navigation = {
 	    });
 
 	    var mobileNavBtn = $('.mobile li.but')
-         
          mobileNavBtn.on('click', function(){
 
          	var boxIn = function( targetBox ) {
 	            box.addClass( 'is-hidden' );
-	            targetBox.removeClass( 'is-hidden' );
-	
-
+	            targetBox.removeClass( 'is-hidden' ); 
             TweenMax.to( targetBox, 0.2, {autoAlpha: 1, className: '+=visible', ease:Power4.easeIn});
 
           
         }
 
-            var box = $( '.box' ); 
-         	var boxID = $(this).attr("data-target");
-         
-           var currentbox = $('.box:not(.is-hidden)');
-           var targetBox = $('.box#' + boxID);
+			var box = $( '.box' ); 
+			var boxID = $(this).attr("data-target");
+			var currentbox = $('.box:not(.is-hidden)');
+			var targetBox = $('.box#' + boxID);
 
             mobileNavBtn.removeClass('active');
             $(this).addClass('active');
             mobileNavBtn.removeClass('mobile-nav');
             $(this).addClass('mobile-nav');
-            console.log('febwhafvejwkqfewq')
+
+
             if ($(this).hasClass('hassubnav')) {
-            	console.log('nottodat bub')
-            	$(this).removeClass('acti')
+            	 $(this).toggleClass('expand');
+            	 
+
             } else {
+            	console.log('else')
 	            $('#navigation').removeClass('open')
 	            $('.open-button').removeClass('open')
             }
 
   
           TweenMax.to(currentbox, 0.2, {ease:Power4.easeOut, className: '-=visible', autoAlpha: 0,  onComplete: boxIn, onCompleteParams: [targetBox] });
-
+ 
 
         });     	    
 	}

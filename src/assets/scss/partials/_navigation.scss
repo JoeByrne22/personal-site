@@ -199,7 +199,7 @@ nav.anchor-nav{
       }
      }
 
-      &.hassubnav.active{ 
+      &.hassubnav.expand{ 
         .nav-head:after{
           transform: rotate(90deg);
         }

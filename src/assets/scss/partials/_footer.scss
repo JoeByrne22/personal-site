@@ -18,18 +18,19 @@
     align-items: center;
     justify-content: left;
     padding: 1.9rem;
-            @media #{$breakpoint-md} {
-                  justify-content: center;
-                  padding: auto;
-            }
-
-
+      @media #{$breakpoint-md} {
+            justify-content: center;
+            padding: auto;
+      }
   }
   nav.nav{
     display: flex;
     flex-wrap: wrap;
     width:100%;
+          @media #{$breakpoint-md} {
+        width: 67%;
   }
+}
   .footer-middle {
     display: block;
     align-items: center;
@@ -50,21 +51,22 @@
   }
   .footer-right {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 13px;
+    justify-content: flex-end;
+    // padding-bottom: 13px
+    margin-top: 16px;
     position: absolute;
     right:0;
       @media #{$breakpoint-md} {
+        margin-top: 10px;
         position: relative;
-
+            justify-content: center;
       }
     li{
         width: 45px;
         height: 42px;
         display: block;
         &:last-child{
-          margin-right:34%;
+          margin-right:5%;
         }
       a {
         width: 36px;
@@ -92,10 +94,5 @@
         }
       }
     }
-      
-  }
-
-  .footer-mobile{
-
   }
 }

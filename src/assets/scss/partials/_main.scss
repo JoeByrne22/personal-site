@@ -35,16 +35,28 @@
   }
       .line-left {
         height: 146%;
-        width: 80%;
+        width: 121%;
         background-repeat: no-repeat;
-        top: -145px;
-        left: -120px
+        top: -170px;
+        left: -120px;
+                @media #{$breakpoint-md} {
+          width: 80%;
+          top: -145px; 
+          }
       }
       .line-right {
-        width: 54%;
+        width: 125%;
         background-repeat: no-repeat;
-        height: 118%;
-        right: -167px;
+        height: 105%;
+        right: -77px;
+        top: 243px;
+          @media #{$breakpoint-md} {
+            top:auto;
+            width: 54%;
+            background-repeat: no-repeat;
+            height: 118%;
+            right: -272px;
+          }
       }
 }
 
@@ -108,7 +120,7 @@
   }
   .intro02{
     .hero-content{
-      padding: 0rem 0 0rem 0;
+      padding: 0rem 0 2rem 0;
         @media #{$breakpoint-md} {
              padding:15rem 0 11rem 0; 
         }
@@ -633,7 +645,9 @@
         top: 2090px;
         background-image: url(../img/src/line-right-overlay.svg);
         position: absolute;
-        right: -100px;
+        
+        right: -189px;
+      background-size: cover;
         @media only screen and (max-width: 1000px) {
             visibility: hidden;
             opacity: 0;
@@ -641,8 +655,10 @@
     }
   .hero-content{
     padding:2.4rem 0 2.4rem 0;
+    justify-content: center;
           @media #{$breakpoint-md} {
-              padding:15rem 0 11rem 0;         
+              padding:15rem 0 11rem 0;     
+              justify-content: auto;    
           }
   }
   .flex-container{
@@ -657,7 +673,7 @@
           p{
             padding-top: 3rem;
             color: $white;
-            line-height: 16px;
+            // line-height: 16px;
 
             @media #{$breakpoint-md} {
               color: $black;
@@ -691,7 +707,7 @@
   .header-container{
     padding: 0rem 2.3rem 0rem 2.2rem;
       @media #{$breakpoint-md} {
-        padding: 0rem 11.4rem 2.8rem 11.4rem;
+        padding: 0rem 11.4rem 10rem 11.4rem;
       }
     }
 
@@ -731,6 +747,12 @@
   }
 
     .article05-2{
+      // .wrapper {
+      //   justify-content: center;
+      //     @media #{$breakpoint-md} {
+      //       justify-content: auto
+      //     }
+      // }
         h3 {
          
             &.section-3-title {
@@ -742,7 +764,7 @@
                 line-height: 3.5rem;
                     @media #{$breakpoint-md} {
                       height: auto;
-                      margin: 10rem 0 0 0;
+                      margin: 10rem 0 10rem 0;
                       text-align: center;
                       font-size: 4rem;
                   }

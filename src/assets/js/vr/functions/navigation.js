@@ -1,20 +1,7 @@
 var navigation = {
 	init: function() {
 
-		// var navigationHeight = $('#navigation').outerHeight();
 
-		// $(window).on("scroll touchmove", function () {
-		// 	var fixHeaderHeight = $('#intro').outerHeight() - navigationHeight;
-
-		// 	if ($(window).scrollTop() >= fixHeaderHeight) {
-		//        $('#navigation').addClass('fixed-header');
-		//     }
-		//     else {
-		//        $('#navigation').removeClass('fixed-header');
-		//     }
-		// });
- 
-   
 
 		// scrolling to top
 		$('.header .logo').on('click', function(e){
@@ -43,43 +30,49 @@ var navigation = {
 	        $(this).toggleClass('open');
 	        $("header.header").toggleClass('open');
 	        $(".anchor-nav").toggleClass('open');
+
 	        if ($('.tile.hassubnav').hasClass('active')) {
-	        	$('.tile').removeClass('active')
+	        	//$('.tile').removeClass('active')
 	        	$('.tile').removeClass('open') 
 	        	$('.hassubnav').removeClass('mobile-nav')
 	        }
 
 	    });
 
-
+	    var mobileNavBtn = $('.mobile li.but')
          
-         $('.mobile li.but').on('click', function( ){
+         mobileNavBtn.on('click', function(){
 
          	var boxIn = function( targetBox ) {
-            box.addClass( 'is-hidden' );
-            targetBox.removeClass( 'is-hidden' );
+	            box.addClass( 'is-hidden' );
+	            targetBox.removeClass( 'is-hidden' );
+	
 
-            //TweenMax.to( targetBox, 0.2, {autoAlpha: 1,className: '+=visible', ease:Power4.easeIn});
+            TweenMax.to( targetBox, 0.2, {autoAlpha: 1, className: '+=visible', ease:Power4.easeIn});
 
-            if ((targetBox).is('.box04')) { 
-                section04.init(); 
-            }
-
-            if ((targetBox).is('.box02')) {
-            } else {
-                $('.mobile .open').removeClass('open');
-                $(".mobile header.header").removeClass('open');
-                $(".mobile .anchor-nav").removeClass('open');
-            }
+          
         }
 
             var box = $( '.box' ); 
          	var boxID = $(this).attr("data-target");
          
-          var currentbox = $('.box:not(.is-hidden)');
+           var currentbox = $('.box:not(.is-hidden)');
            var targetBox = $('.box#' + boxID);
-          $(this).toggleClass('active');
-          $(this).toggleClass('mobile-nav'); 
+
+            mobileNavBtn.removeClass('active');
+            $(this).addClass('active');
+            mobileNavBtn.removeClass('mobile-nav');
+            $(this).addClass('mobile-nav');
+            console.log('febwhafvejwkqfewq')
+            if ($(this).hasClass('hassubnav')) {
+            	console.log('nottodat bub')
+            	$(this).removeClass('acti')
+            } else {
+	            $('#navigation').removeClass('open')
+	            $('.open-button').removeClass('open')
+            }
+
+  
           TweenMax.to(currentbox, 0.2, {ease:Power4.easeOut, className: '-=visible', autoAlpha: 0,  onComplete: boxIn, onCompleteParams: [targetBox] });
 
 

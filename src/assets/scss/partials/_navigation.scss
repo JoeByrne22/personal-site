@@ -1,7 +1,7 @@
 nav.anchor-nav{ 
   top:0;
   width: 88%;
-  height: 10%;
+  height: 67px;
   background:transparent;
   transition: all .6s ease-in;
   background-color: $white;
@@ -185,8 +185,8 @@ nav.anchor-nav{
             content: '';
             background-image: url(../img/src/subnav.svg);
             background-repeat: no-repeat;
-            height: 25px;
-            width: 13px;
+            height: 41px;
+            width: 20px;
             right: 2rem; 
             top:1.2rem;
             position: absolute;

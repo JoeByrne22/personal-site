@@ -41,10 +41,18 @@ header.header{
 
       &.logo.client{
         background-image: url('../img/logo/core-hr.svg');
-        width: 134px;
-        height: 64px;
         object-fit: contain;
         color: black;
+        width: 89px;
+        height: 27px;
+        top: 19px;
+        left: 15px;
+          @media #{$breakpoint-md} {
+          width: 134px;
+          height: 64px;
+          top:auto;
+          left:auto;
+        }
       } 
 		}
 	}

@@ -32,7 +32,7 @@
     color: white;
     margin: 0;
     position: absolute;
-    top: 50%;
+    top: 43%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
@@ -42,7 +42,7 @@
       }
   }
       .line-left {
-        height: 146%;
+        height: 78%;
         width: 121%;
         background-repeat: no-repeat;
         top: -170px;
@@ -470,7 +470,7 @@
          @media #{$breakpoint-md} {
           background-color: $black;
          }
-                  .bcg{
+          .bcg{
             background-size: cover;
             background-image: url('../img/src/segment-4-retail-sector02-mobile.jpg');
               @media #{$breakpoint-md} { 

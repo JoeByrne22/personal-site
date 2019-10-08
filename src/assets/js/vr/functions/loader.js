@@ -68,8 +68,8 @@ var loader = {
 			.fromTo($('#intro h1'), 4, {scale:0.8, autoAlpha: 0}, {scale:0.9, autoAlpha: 1, ease:Power4.easeIn}, '-=2') 
 			.fromTo($('#intro h4'), 4, {scale:0.8, autoAlpha: 0}, {scale:0.9, autoAlpha: 1, ease:Power4.easeIn}, '-=2') 
 			.to($('.header'), 0.5, {autoAlpha: 1, ease:Power1.easeOut})
-			.to($('.content-sections'), 0.5, {autoAlpha: 1, ease:Power1.easeOut}) 
-			.to($('#intro'), 0.5, {autoAlpha: 0, ease:Power1.easeOut}) 
+			.to($('.content-sections'), 100.5, {autoAlpha: 1, ease:Power1.easeOut}) 
+			.to($('#intro'), 100.5, {autoAlpha: 0, ease:Power1.easeOut}) 
 
 
 

@@ -1,44 +1,12 @@
 <header class="header">
 	<div class="wrap-header">
- 
-		<nav class="anchor-nav flex flex-wrap" role="navigation" id="navigation">
- 
-			<div class="container">
-				<div class="wrapper">
-					<h1>
-						<a href="#intro" onclick='location.reload(true)' class="logo client tile but section01">CoreHR</a>
-					</h1>
+		  <nav>
+		    <ul>
+		      <li><a href="#work">WoRk</a></li>
+		      <li><a href="#about">ABoUt</a></li>
+		      <li><a href="#contact">coNTacT</a></li>
 
-					<ul class="tabs" >
-					{{#each global.navItems}}
-						{{#each subnav}}
-							<li class="{{slug}}" data-target="{{target}}">
-								<span class="nav-head">{{title}}</span>
-								{{#if subnav}}
-									<div class="subnav">
-										<ul>
-										{{#each subnav}}
-											<li class="nav-navItem">
-											<span class="{{slug}}" data-target="{{target}}">{{title}}</span>
-											</li>
-										{{/each}}
-										</ul>
-									</div>
-								{{/if}}
-							</li>
-						{{/each}}
-					{{/each}}	
-					</ul> 
-				</div>
-			</div>
-		</nav>
-	
-		</div>
-
-		<a href="#" class="open-button">
-            <span></span>
-            <span></span>
-            <span></span>
-        </a>
+		    </ul>
+		  </nav>
 	</div>
 </header>

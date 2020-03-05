@@ -1,20 +1,8 @@
 var accessibility = {
+		init: function() {
 
-	elms: {
-		skip: $('.skip')
-	},
+		console.log('accessibility')
 
-	//  Skip navigation functionality for tab navigation
-	skipNav: function() {
-		accessibility.elms.skip.click(function(){
-			var skipTo='#'+this.href.split('#')[1];
-			$(skipTo).attr('tabindex', -1).on('blur focusout', function () {
-				$(this).removeAttr('tabindex');
-			}).focus();
-		});
-	},
-
-	init: function() {
-		accessibility.skipNav();
 	}
+
 };

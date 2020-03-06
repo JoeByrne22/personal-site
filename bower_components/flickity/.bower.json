@@ -40,12 +40,12 @@
     "gulpfile.js",
     "notes.md"
   ],
-  "version": "2.2.0",
-  "_release": "2.2.0",
+  "version": "2.2.1",
+  "_release": "2.2.1",
   "_resolution": {
     "type": "version",
-    "tag": "v2.2.0",
-    "commit": "66cf8225a04e169ab078493c899576be1fa844c9"
+    "tag": "v2.2.1",
+    "commit": "ad93dba38f65a4d4de4f7fa089581f3b8a41be96"
   },
   "_source": "https://github.com/metafizzy/flickity.git",
   "_target": "^2.0.5",

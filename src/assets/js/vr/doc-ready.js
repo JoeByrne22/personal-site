@@ -53,6 +53,6 @@ $(function() {
   swiper.init();
   loader.init();
   scrollMagic.init();
-  tabs.init();
   navigation.init();
+  section01.init();
 });

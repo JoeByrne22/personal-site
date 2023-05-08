@@ -21,7 +21,7 @@
     "gulp-iconfont-css": "^2.3.0",
     "gulp-if": "^2.0.0",
     "gulp-minify-css": "^1.2.2",
-    "gulp-modernizr": "^1.0.0-alpha",
+    "gulp-modernizr": "^4.0.4",
     "gulp-multi-dest": "0.0.4",
     "gulp-notify": "^2.2.0",
     "gulp-sass": "^2.3.2",
